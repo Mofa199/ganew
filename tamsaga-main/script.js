@@ -110,7 +110,6 @@ class PageManager {
     }
 
     // Setup mobile menu functionality
-<script>
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("menu-toggle");
   const menu = document.getElementById("mobile-menu");
@@ -138,9 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-</script>
-
-            } else {
+ {
                 // Fallback for pages with inline mobile menu (like schedule.html)
                 // Also handle cases where the mobile menu might be loaded dynamically
                 const checkForMobileMenu = () => {
@@ -196,3 +193,4 @@ function hideLoader() {
     }
 
 }
+
