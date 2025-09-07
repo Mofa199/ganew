@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15th General Assembly - TAMSA GA 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans antialiased text-gray-800">
+    
+    <!-- Header Container -->
+    <div id="header-container"></div>
+    
+    <!-- GA Hero Section -->
+    <section class="hero-gradient text-white py-20 min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="flex justify-center">
+                    <div class="relative">
+                        <img src="images/about.jpg" alt="General Assembly" class="rounded-xl shadow-2xl w-full max-w-md">
+                        <div class="absolute -bottom-4 -right-4 text-white p-4 rounded-lg shadow-lg" style="background-color: #f3ab1b; color: #213874;">
+                            <h3 class="font-bold">15th GA</h3>
+                            <p class="text-sm">Oct 5-8, 2025</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-effect p-8">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">15th General Assembly</h1>
+                    <h2 class="text-2xl font-semibold mb-6" style="color: #f3ab1b;">Shaping the Future of Medical Education</h2>
+                    <p class="text-xl mb-6">Join delegates from across Africa for strategic planning, governance, and democratic participation in TAMSA's future direction including the 2nd Medical Ethical Moot Court.</p>
+                    
+                    <!-- Updated Event Details -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-calendar-alt mr-3" style="color: #f3ab1b;"></i>
+                            <span>5th - 8th October 2025</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3" style="color: #f3ab1b;"></i>
+                            <span>Dar es Salaam, Tanzania</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <a href="elections.html" class="px-6 py-3 rounded-md font-medium text-white transition" style="background-color: #f3ab1b; color: #213874;">Election Info</a>
+                        <a href="moot-court.html" class="px-6 py-3 rounded-md font-medium text-white transition" style="background-color: #1a6ac3;">Moot Court</a>
+                        <a href="#timeline" class="border border-white px-6 py-3 rounded-md font-medium text-white transition" onmouseover="this.style.backgroundColor='white'; this.style.color='#213874'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='white'">Event Timeline</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Assembly Overview Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-8" style="color: #213874;">Assembly Overview</h2>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    The 15th TAMSA General Assembly represents the democratic heart of our organization, bringing together delegates from medical schools across Tanzania and affiliated institutions from the broader East African region. This biennial gathering serves as the supreme decision-making body of TAMSA, where policy directions are set, leadership is elected, and the future of medical education advocacy is determined.
+                </p>
+                
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Over two intensive days, delegates will participate in committee sessions, plenary discussions, and electoral processes that will shape TAMSA's direction for the next two years. The assembly combines governance with professional development, featuring capacity building sessions and strategic planning workshops.
+                </p>
+                
+                <h3 class="text-2xl font-bold mt-8 mb-4" style="color: #213874;">Key Assembly Components</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="p-6 rounded-lg" style="background-color: rgba(243, 171, 27, 0.1);">
+                        <h4 class="text-xl font-bold mb-3" style="color: #213874;">Governance & Policy</h4>
+                        <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                            <li>Constitutional amendments review</li>
+                            <li>Strategic plan approval</li>
+                            <li>Financial reports and budget approval</li>
+                            <li>Policy position statements</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 rounded-lg" style="background-color: rgba(26, 106, 195, 0.1);">
+                        <h4 class="text-xl font-bold mb-3" style="color: #213874;">Elections & Leadership</h4>
+                        <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                            <li>Presidential and executive elections</li>
+                            <li>Committee chair appointments</li>
+                            <li>Regional representative selection</li>
+                            <li>Standing committee formations</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 rounded-lg" style="background-color: rgba(243, 171, 27, 0.1);">
+                        <h4 class="text-xl font-bold mb-3" style="color: #213874;">Capacity Building</h4>
+                        <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                            <li>Leadership development workshops</li>
+                            <li>Advocacy training sessions</li>
+                            <li>Project management skills</li>
+                            <li>Public speaking and presentation skills</li>
+                            <li><a href="medicopreneur.html" class="text-blue-600 hover:underline font-medium">Medicopreneur Program</a> - Healthcare entrepreneurship training</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 rounded-lg" style="background-color: rgba(26, 106, 195, 0.1);">
+                        <h4 class="text-xl font-bold mb-3" style="color: #213874;">Plenary Sessions</h4>
+                        <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                            <li><a href="scope.html" class="text-blue-600 hover:underline">SCOPE (Community Health)</a></li>
+                            <li><a href="score.html" class="text-blue-600 hover:underline">SCORE (Research & Exchange)</a></li>
+                            <li><a href="scora.html" class="text-blue-600 hover:underline">SCORA (Reproductive Health)</a></li>
+                            <li><a href="scoph.html" class="text-blue-600 hover:underline">SCOPH (Public Health)</a></li>
+                            <li><a href="scorp.html" class="text-blue-600 hover:underline">SCORP (Human Rights & Peace)</a></li>
+                            <li><a href="presidents-session.html" class="text-blue-600 hover:underline">Presidents' Session</a></li>
+                            <li><a href="capacity-building.html" class="text-blue-600 hover:underline">Capacity Building Session</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Timeline Section -->
+    <section id="timeline" class="py-20" style="background: linear-gradient(135deg, #213874 0%, #1a6ac3 50%, #213874 100%);">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Event Timeline</h2>
+                <div class="w-24 h-1 mx-auto mb-6" style="background-color: #f3ab1b;"></div>
+                <p class="text-xl text-white max-w-3xl mx-auto">Four days of transformative activities from medical outreach to cultural celebration</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Day 1: 5th October -->
+                <div class="glass-effect rounded-xl p-6 text-center" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: #f3ab1b;">
+                        <i class="fas fa-stethoscope text-2xl" style="color: #213874;"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">5th October</h3>
+                    <h4 class="text-lg font-semibold mb-3" style="color: #f3ab1b;">TAMSA Medical Outreach</h4>
+                    <p class="text-white text-sm mb-4">Free healthcare services and medical screenings for underserved communities in Dar es Salaam</p>
+                    <div class="space-y-2 text-white text-xs">
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-clock mr-2" style="color: #f3ab1b;"></i>
+                            <span>6:00 AM - 4:00 PM</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-map-marker-alt mr-2" style="color: #f3ab1b;"></i>
+                            <span>Temeke District</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 2: 6th October -->
+                <div class="glass-effect rounded-xl p-6 text-center" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: #f3ab1b;">
+                        <i class="fas fa-microscope text-2xl" style="color: #213874;"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">6th October</h3>
+                    <h4 class="text-lg font-semibold mb-3" style="color: #f3ab1b;">17th International Scientific Conference</h4>
+                    <p class="text-white text-sm mb-4">Research presentations, keynote speeches, and Training Sessions by Aenon Healthcare</p>
+                    <div class="space-y-2 text-white text-xs">
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-clock mr-2" style="color: #f3ab1b;"></i>
+                            <span>7:00 AM - 6:30 PM</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-map-marker-alt mr-2" style="color: #f3ab1b;"></i>
+                            <span>Kairuki University</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 3: 7th October -->
+                <div class="glass-effect rounded-xl p-6 text-center" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: #f3ab1b;">
+                        <i class="fas fa-gavel text-2xl" style="color: #213874;"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">7th October</h3>
+                    <h4 class="text-lg font-semibold mb-3" style="color: #f3ab1b;">15th General Assembly</h4>
+                    <p class="text-white text-sm mb-4">Democratic governance, elections, and 2nd Medical Ethical Moot Court Final</p>
+                    <div class="space-y-2 text-white text-xs">
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-clock mr-2" style="color: #f3ab1b;"></i>
+                            <span>8:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-map-marker-alt mr-2" style="color: #f3ab1b;"></i>
+                            <span>Kairuki University</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 4: 8th October -->
+                <div class="glass-effect rounded-xl p-6 text-center" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: #f3ab1b;">
+                        <i class="fas fa-umbrella-beach text-2xl" style="color: #213874;"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">8th October</h3>
+                    <h4 class="text-lg font-semibold mb-3" style="color: #f3ab1b;">Post-GA Activities</h4>
+                    <p class="text-white text-sm mb-4">Cultural celebration, team bonding, and networking at beautiful Mbudya Island</p>
+                    <div class="space-y-2 text-white text-xs">
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-clock mr-2" style="color: #f3ab1b;"></i>
+                            <span>Full Day</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-map-marker-alt mr-2" style="color: #f3ab1b;"></i>
+                            <span>Mbudya Island</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medicopreneur Program Highlight Section -->
+    <section class="py-20" style="background: linear-gradient(135deg, #f3ab1b 0%, #213874 100%);">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="text-white mb-12">
+                <h2 class="text-4xl font-bold mb-4">Medicopreneur Program</h2>
+                <p class="text-xl mb-8">Bridging Medicine and Entrepreneurship - Featured Program at GA 2025</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="glass-effect p-8 text-left">
+                    <h3 class="text-2xl font-bold mb-4 text-white">Innovation Meets Healthcare</h3>
+                    <p class="text-white mb-4">Join our groundbreaking medicopreneur program designed to empower medical students and young healthcare professionals to become innovative entrepreneurs.</p>
+                    
+                    <div class="space-y-3 text-white mb-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-lightbulb mr-3" style="color: #f3ab1b;"></i>
+                            <span>Innovation Workshops & Mentorship</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-trophy mr-3" style="color: #f3ab1b;"></i>
+                            <span>Pitch Competition with Prizes</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-network-wired mr-3" style="color: #f3ab1b;"></i>
+                            <span>Access to Healthcare Entrepreneur Network</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-certificate mr-3" style="color: #f3ab1b;"></i>
+                            <span>Official Certification in Healthcare Entrepreneurship</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <a href="medicopreneur.html" class="bg-white px-6 py-3 rounded-md font-bold transition transform hover:scale-105" style="color: #213874;">Learn More</a>
+                        <a href="https://tamsatanzania.org/eventsthe-17th-international-scientific-conference-15th-tamsa-general-assembly/application-form/" class="border-2 border-white px-6 py-3 rounded-md font-bold text-white transition" onmouseover="this.style.backgroundColor='white'; this.style.color='#213874'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='white'">Register Now</a>
+                    </div>
+                </div>
+                
+                <div class="glass-effect p-6">
+                    <div class="bg-white rounded-lg p-6" style="color: #213874;">
+                        <h4 class="text-xl font-bold mb-4">Program Schedule</h4>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="font-medium">Date:</span>
+                                <span>October 6, 2025</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-medium">Time:</span>
+                                <span>9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-medium">Venue:</span>
+                                <span>Innovation Hub</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-medium">Capacity:</span>
+                                <span>50 Participants</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 p-4 rounded-lg" style="background-color: rgba(243, 171, 27, 0.1);">
+                            <h5 class="font-bold mb-2">Program Highlights:</h5>
+                            <ul class="text-xs space-y-1">
+                                <li>• Business Model Development Workshop</li>
+                                <li>• Healthcare Innovation Showcase</li>
+                                <li>• Mentorship with Industry Experts</li>
+                                <li>• Pitch Competition & Awards</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Moot Court Section -->
+    <section id="moot-court" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-8 text-center" style="color: #213874;">2nd Medical Ethical Moot Court</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="glass-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4" style="color: #213874;">Championship Final</h3>
+                    <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-lg mb-4">
+                        <div class="text-center">
+                            <h4 class="text-2xl font-bold mb-4" style="color: #213874;">Grand Final</h4>
+                            <div class="flex items-center justify-between">
+                                <div class="text-center">
+                                    <div class="w-16 h-16 mx-auto mb-2 bg-blue-600 rounded-full flex items-center justify-center">
+                                        <span class="text-white font-bold text-xl">KC</span>
+                                    </div>
+                                    <h5 class="font-bold" style="color: #213874;">KCMC</h5>
+                                    <p class="text-sm text-gray-600">Kilimanjaro Christian Medical Centre</p>
+                                </div>
+                                <div class="text-3xl font-bold" style="color: #f3ab1b;">VS</div>
+                                <div class="text-center">
+                                    <div class="w-16 h-16 mx-auto mb-2 bg-green-600 rounded-full flex items-center justify-center">
+                                        <span class="text-white font-bold text-xl">KU</span>
+                                    </div>
+                                    <h5 class="font-bold" style="color: #213874;">KU</h5>
+                                    <p class="text-sm text-gray-600">Kairuki University</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-3 rounded-lg" style="background-color: rgba(243, 171, 27, 0.1);">
+                                <p class="text-sm" style="color: #213874;"><strong>Date:</strong> 7th October 2025</p>
+                                <p class="text-sm" style="color: #213874;"><strong>Time:</strong> 2:00 PM - 4:00 PM</p>
+                                <p class="text-sm" style="color: #213874;"><strong>Venue:</strong> Main Assembly Hall</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4" style="color: #213874;">Competition Overview</h3>
+                    <p class="text-gray-700 mb-4">The Medical Ethical Moot Court provides medical students with the opportunity to engage in legal reasoning, ethical analysis, and advocacy skills through simulated court proceedings focused on medical ethics cases.</p>
+                    
+                    <h4 class="font-semibold mb-2" style="color: #213874;">Tournament Format:</h4>
+                    <ul class="list-disc pl-6 space-y-1 text-gray-700 mb-4">
+                        <li>Preliminary rounds (completed)</li>
+                        <li>Semifinal competitions</li>
+                        <li>Championship final during GA</li>
+                        <li>Expert judges panel</li>
+                    </ul>
+                    
+                    <div class="mt-6">
+                        <a href="moot-court.html" class="font-medium transition" style="color: #1a6ac3;" onmouseover="this.style.color='#213874'" onmouseout="this.style.color='#1a6ac3'">
+                            View Full Tournament Details →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Elections Section -->
+    <section id="elections" class="py-16" style="background-color: #f8f9fa;">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-8 text-center" style="color: #213874;">Electoral Process</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="glass-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4" style="color: #213874;">Electoral Committee</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <img src="images/justice.png" alt="Electoral Committee Chair" class="w-12 h-12 rounded-full mr-4 object-cover">
+                            <div>
+                                <h4 class="font-bold">Dr. Justice Mwangi</h4>
+                                <p class="text-sm text-gray-600">Electoral Committee Chairperson</p>
+                                <p class="text-xs text-gray-500">Constitutional Law & Governance Expert</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <img src="images/IMG_1871.jpeg" alt="Electoral Committee Member" class="w-12 h-12 rounded-full mr-4 object-cover">
+                            <div>
+                                <h4 class="font-bold">Mohamed Faisal</h4>
+                                <p class="text-sm text-gray-600">Electoral Committee Member</p>
+                                <p class="text-xs text-gray-500">Voting Systems Coordinator</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <a href="#electoral-procedures" class="font-medium transition" style="color: #1a6ac3;" onmouseover="this.style.color='#213874'" onmouseout="this.style.color='#1a6ac3'">
+                            View Full Electoral Procedures →
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4" style="color: #213874;">How to Vote</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 text-blue-800 rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">1</div>
+                            <span>Register as a delegate with your local TAMSA chapter</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 text-blue-800 rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">2</div>
+                            <span>Attend mandatory pre-GA orientation session</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 text-blue-800 rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">3</div>
+                            <span>Verify your voting credentials at registration</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 text-blue-800 rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">4</div>
+                            <span>Participate in candidate interviews and debates</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 text-blue-800 rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">5</div>
+                            <span>Cast your vote during the election session</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="https://tamsatanzania.org/eventsthe-17th-international-scientific-conference-15th-tamsa-general-assembly/application-form/" 
+                   class="inline-block px-8 py-4 rounded-md font-bold text-lg transition transform hover:scale-105 mr-4" 
+                   style="background-color: #f3ab1b; color: #213874;">
+                    Register as Delegate
+                </a>
+                <a href="#electoral-procedures" 
+                   class="inline-block px-8 py-4 rounded-md font-bold text-lg border-2 transition transform hover:scale-105" 
+                   style="border-color: #213874; color: #213874;">
+                    Electoral Procedures
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GA Schedule Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-8 text-center" style="color: #213874;">General Assembly Schedule</h2>
+            
+            <!-- Day 1 Schedule -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold mb-6" style="color: #213874;">Day 1 - October 5, 2025 (Opening & Governance)</h3>
+                <div class="glass-card p-6 rounded-lg">
+                    <div class="space-y-4">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg" style="background-color: rgba(243, 171, 27, 0.1);">
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg" style="color: #213874;">Delegate Registration & Accreditation</h4>
+                                <p class="text-gray-600">Verification of delegate credentials and distribution of assembly materials</p>
+                                <p class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Registration Desk</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 md:ml-4">
+                                <span class="bg-white px-3 py-1 rounded-full text-sm font-medium" style="color: #213874;">07:00 - 08:30</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg" style="background-color: rgba(26, 106, 195, 0.1);">
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg" style="color: #213874;">Opening Ceremony</h4>
+                                <p class="text-gray-600">National anthem, prayers, and welcome addresses</p>
+                                <p class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Main Assembly Hall</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 md:ml-4">
+                                <span class="bg-white px-3 py-1 rounded-full text-sm font-medium" style="color: #213874;">08:30 - 09:30</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg" style="background-color: rgba(243, 171, 27, 0.1);">
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg" style="color: #213874;">Presidential Address</h4>
+                                <p class="text-gray-600">State of the Association report and vision for the future</p>
+                                <p class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Main Assembly Hall</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 md:ml-4">
+                                <span class="bg-white px-3 py-1 rounded-full text-sm font-medium" style="color: #213874;">09:30 - 10:15</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg" style="background-color: rgba(26, 106, 195, 0.1);">
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg" style="color: #213874;">Financial Reports & Budget Approval</h4>
+                                <p class="text-gray-600">Treasurer's report and proposed budget for 2025-2027</p>
+                                <p class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Main Assembly Hall</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 md:ml-4">
+                                <span class="bg-white px-3 py-1 rounded-full text-sm font-medium" style="color: #213874;">10:30 - 12:00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg" style="background-color: rgba(243, 171, 27, 0.1);">
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg" style="color: #213874;">Lunch & Networking</h4>
+                                <p class="text-gray-600">Delegate networking and informal discussions</p>
+                                <p class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> University Cafeteria</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 md:ml-4">
+                                <span class="bg-white px-3 py-1 rounded-full text-sm font-medium" style="color: #213874;">12:00 - 13:00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg" style="background-color: rgba(26, 106, 195, 0.1);">
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg" style="color: #213874;">Committee Reports & Strategic Planning</h4>
+                                <p class="text-gray-600">Standing committee reports and strategic plan review</p>
+                                <p class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Main Assembly Hall</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 md:ml-4">
+                                <span class="bg-white px-3 py-1 rounded-full text-sm font-medium" style="color: #213874;">13:00 - 15:00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg" style="background-color: rgba(243, 171, 27, 0.1);">
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg" style="color: #213874;">Candidate Presentations & Interviews</h4>
+                                <p class="text-gray-600">Presidential and executive position candidate presentations</p>
+                                <p class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Main Assembly Hall</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 md:ml-4">
+                                <span class="bg-white px-3 py-1 rounded-full text-sm font-medium" style="color: #213874;">15:15 - 17:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 2 Schedule -->
+            <div>
+                <h3 class="text-2xl font-bold mb-6" style="color: #213874;">Day 2 - October 6, 2025 (Elections & Capacity Building)</h3>
+                <div class="glass-card p-6 rounded-lg">
+                    <div class="space-y-4">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg" style="background-color: rgba(243, 171, 27, 0.1);">
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg" style="color: #213874;">Plenary Sessions (Parallel)</h4>
+                                <p class="text-gray-600">SCOPE, SCORE, SCORA, SCOPH, SCORP committee sessions</p>
+                                <p class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Committee Rooms A-E</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 md:ml-4">
+                                <span class="bg-white px-3 py-1 rounded-full text-sm font-medium" style="color: #213874;">08:00 - 10:00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg" style="background-color: rgba(26, 106, 195, 0.1);">
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg" style="color: #213874;">Presidential Election</h4>
+                                <p class="text-gray-600">Voting for TAMSA President 2025-2027</p>
+                                <p class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Main Assembly Hall</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 md:ml-4">
+                                <span class="bg-white px-3 py-1 rounded-full text-sm font-medium" style="color: #213874;">10:30 - 12:00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg" style="background-color: rgba(243, 171, 27, 0.1);">
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg" style="color: #213874;">Executive Elections</h4>
+                                <p class="text-gray-600">Elections for Vice President, Secretary General, and Treasurer</p>
+                                <p class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Main Assembly Hall</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 md:ml-4">
+                                <span class="bg-white px-3 py-1 rounded-full text-sm font-medium" style="color: #213874;">13:00 - 14:30</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg" style="background-color: rgba(26, 106, 195, 0.1);">
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg" style="color: #213874;">Capacity Building Sessions</h4>
+                                <p class="text-gray-600">Leadership workshops led by PSD and TSD</p>
+                                <p class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Workshop Rooms</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 md:ml-4">
+                                <span class="bg-white px-3 py-1 rounded-full text-sm font-medium" style="color: #213874;">14:45 - 16:00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg" style="background-color: rgba(243, 171, 27, 0.1);">
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg" style="color: #213874;">Closing Ceremony & Handover</h4>
+                                <p class="text-gray-600">Results announcement, oath-taking, and official handover</p>
+                                <p class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Main Assembly Hall</p>
+                            </div>
+                            <div class="mt-2 md:mt-0 md:ml-4">
+                                <span class="bg-white px-3 py-1 rounded-full text-sm font-medium" style="color: #213874;">16:00 - 17:30</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Electoral Procedures Section -->
+    <section id="electoral-procedures" class="py-16" style="background-color: #f8f9fa;">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-8 text-center" style="color: #213874;">Electoral Procedures</h2>
+            
+            <div class="space-y-8">
+                <div class="glass-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4" style="color: #213874;">Eligibility Criteria</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold mb-2">For Candidates:</h4>
+                            <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                                <li>Active TAMSA member for minimum 2 years</li>
+                                <li>Good academic standing</li>
+                                <li>No disciplinary actions in past 2 years</li>
+                                <li>Endorsement from local chapter</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">For Voters:</h4>
+                            <ul class="list-disc pl-6 space-y-1 text-gray-700">
+                                <li>Registered delegate from member institution</li>
+                                <li>Current membership fees paid</li>
+                                <li>Attendance at pre-GA orientation</li>
+                                <li>Valid student identification</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4" style="color: #213874;">Voting Process</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 text-blue-800 rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 mt-1">1</div>
+                            <div>
+                                <h4 class="font-semibold">Secret Ballot</h4>
+                                <p class="text-gray-600">All voting conducted via secret ballot to ensure privacy and independence</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 text-blue-800 rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 mt-1">2</div>
+                            <div>
+                                <h4 class="font-semibold">Simple Majority</h4>
+                                <p class="text-gray-600">Candidates require 50% + 1 of valid votes cast to win</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 text-blue-800 rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 mt-1">3</div>
+                            <div>
+                                <h4 class="font-semibold">Run-off Elections</h4>
+                                <p class="text-gray-600">If no candidate reaches majority, run-off between top 2 candidates</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 text-blue-800 rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 mt-1">4</div>
+                            <div>
+                                <h4 class="font-semibold">Independent Oversight</h4>
+                                <p class="text-gray-600">Electoral Committee ensures fair and transparent process</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+    
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

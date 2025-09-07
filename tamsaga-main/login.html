@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15th GA & 17th ISC 2025 - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen hero-gradient">
+    <!-- Header Container -->
+    <div id="header-container"></div>
+    
+    <!-- Main Content -->
+    <div id="main-content" class="min-h-screen flex items-center justify-center p-4">
+        <div class="w-full max-w-md fade-in">
+            <div class="glass-effect p-8 shadow-2xl">
+                <div class="text-center mb-8">
+                    <!-- Two Logos in Header -->
+                    <div class="flex justify-center items-center space-x-6 mb-6">
+                        <div>
+                            <img src="images/wite bg.png" alt="TAMSA Logo" class="h-16 w-16 rounded-full border-2 border-white shadow-md">
+                        </div>
+                        <div>
+                            <img src="images/Picture1.png" alt="GA Logo" class="h-16 w-16 rounded-full border-2 border-white shadow-md bg-white p-1">
+                        </div>
+                    </div>
+                    
+                    <h1 class="text-2xl md:text-3xl font-bold text-white mb-2">15th GA & 17th ISC 2025</h1>
+                    <p class="text-white opacity-90 mb-1" style="color: #f3ab1b;">Tanzania Medical Students Association</p>
+                    <p class="text-white opacity-80 text-sm">Member Portal Access</p>
+                </div>
+                
+                <form id="loginForm" class="space-y-6">
+                    <div>
+                        <label for="memberNumber" class="block text-sm font-medium text-white mb-2">Member Number</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-id-card text-gray-400"></i>
+                            </div>
+                            <input type="text" id="memberNumber" name="memberNumber" 
+                                   class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg bg-white bg-opacity-95 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-300" 
+                                   placeholder="Enter your member number" required>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white transition-all duration-300 transform hover:scale-[1.02]" style="background-color: #f3ab1b; color: #213874;">
+                            <i class="fas fa-sign-in-alt mr-2"></i> Continue to Payment
+                        </button>
+                    </div>
+                </form>
+                
+                <div class="mt-6 text-center">
+                    <p class="text-xs text-white opacity-70">
+                        Need help? Contact support at <br>
+                        <a href="mailto:support@tamsatanzania.org" style="color: #f3ab1b;" class="hover:text-white transition-colors duration-300 underline">support@tamsatanzania.org</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+    
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Login form specific functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            // Login Form Handler
+            const loginForm = document.getElementById('loginForm');
+            if (loginForm) {
+                loginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const memberNumber = document.getElementById('memberNumber').value.trim();
+                    
+                    if (memberNumber) {
+                        // Show loading state
+                        const button = e.target.querySelector('button');
+                        const originalText = button.innerHTML;
+                        button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Processing...';
+                        button.disabled = true;
+                        
+                        // Simulate processing time
+                        setTimeout(() => {
+                            window.location.href = `https://tamsatanzania.org/eventsmember/${memberNumber}/payment/`;
+                        }, 1500);
+                    } else {
+                        // Show error message
+                        const input = document.getElementById('memberNumber');
+                        input.classList.add('border-red-500');
+                        input.focus();
+                        
+                        // Remove error styling after 3 seconds
+                        setTimeout(() => {
+                            input.classList.remove('border-red-500');
+                        }, 3000);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

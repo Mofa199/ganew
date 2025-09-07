@@ -1,0 +1,92 @@
+<!-- Footer -->
+<footer class="text-white py-12" style="background-color: #213874;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center space-x-3 mb-4">
+                    <img src="images/wite bg.png" alt="TAMSA Logo" class="h-10 w-10 rounded-full">
+                    <img src="images/Picture1.png" alt="GA Logo" class="h-10">
+                </div>
+                <p class="text-gray-300">TAMSA is a member of the International Federation for Medical Students' Associations (IFMSA), which is one of the world's oldest and largest student-run organizations recognized by the World Health Organization as an official international forum for Medical Students.</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-gray-300 hover:text-white transition">Home</a></li>
+                    <li><a href="about.html" class="text-gray-300 hover:text-white transition">About</a></li>
+                    <li><a href="program.html" class="text-gray-300 hover:text-white transition">Program</a></li>
+                    <li><a href="speakers.html" class="text-gray-300 hover:text-white transition">Speakers</a></li>
+                    <li><a href="venue.html" class="text-gray-300 hover:text-white transition">Venue</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                <ul class="space-y-2 text-gray-300">
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                        <span>Muhimbili University of Health & Allied Sciences (MUHAS), United Nations Road, Upanga, Ilala Tanzania.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-envelope mt-1 mr-3"></i>
+                        <span>scopi@tamsatanzania.org</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-phone-alt mt-1 mr-3"></i>
+                        <span>+255 768 924 035</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-white transition"><i class="fab fa-facebook-f text-xl"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white transition"><i class="fab fa-twitter text-xl"></i></a>
+                    <a href="https://www.instagram.com/tamsatanzania?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-gray-300 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white transition"><i class="fab fa-linkedin-in text-xl"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white transition"><i class="fab fa-youtube text-xl"></i></a>
+                </div>
+                <div class="mt-6">
+                    <h4 class="font-medium mb-2">Subscribe to Newsletter</h4>
+                    <form id="newsletter-form" class="flex">
+                        <input type="email" id="newsletter-email" placeholder="Your email" class="px-4 py-2 rounded-l-md text-gray-900 w-full" required>
+                        <button type="submit" class="px-4 py-2 rounded-r-md transition" style="background-color: #1a6ac3;" onmouseover="this.style.backgroundColor='#213874'" onmouseout="this.style.backgroundColor='#1a6ac3'">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-600 mt-12 pt-8 text-center text-gray-300">
+            <p>&copy; 2025 TAMSA 15th GA and 17th ISC. All rights reserved. | Developed by <a href="xxx.html" target="_blank" class="hover:text-white transition" style="color: #f3ab1b;">MOFAS</a></p>
+        </div>
+    </div>
+    
+    <!-- Newsletter Subscription Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const newsletterForm = document.getElementById('newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = document.getElementById('newsletter-email').value;
+                    
+                    if (email) {
+                        // Create mailto link with proper subject and body
+                        const subject = 'Subscribe to Newsletter';
+                        const body = `Please subscribe the following email to TAMSA newsletter:\n\nEmail: ${email}\n\nThank you!`;
+                        const mailtoLink = `mailto:scopi@tamsatanzania.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                        
+                        // Open email client
+                        window.location.href = mailtoLink;
+                        
+                        // Show success message
+                        alert('Thank you for subscribing! Your email client will open to send the subscription request.');
+                        
+                        // Clear the form
+                        document.getElementById('newsletter-email').value = '';
+                    }
+                });
+            }
+        });
+    </script>
+</footer>

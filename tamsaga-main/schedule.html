@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GA25 Schedule & Gallery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .glass-card {
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .glass-section {
+      backdrop-filter: blur(5px);
+      background-color: rgba(26, 106, 195, 0.2);
+    }
+    .bg-overlay {
+      position: relative;
+    }
+    .bg-overlay::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .content-wrapper {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body class="text-[#213874]">
+  <!-- Navigation -->
+  <nav class="bg-white/80 shadow-lg sticky top-0 z-50 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <a href="#" class="flex-shrink-0">
+            <img src="images/Picture1.png" alt="GA Logo" class="h-10">
+          </a>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-[#213874] font-medium hover:text-[#1a6ac3] transition">Home</a>
+          <a href="about.html" class="text-[#213874] font-medium hover:text-[#1a6ac3] transition">About</a>
+          <a href="program.html" class="text-[#213874] font-medium hover:text-[#1a6ac3] transition">Program</a>
+          <a href="speakers.html" class="text-[#213874] font-medium hover:text-[#1a6ac3] transition">Speakers</a>
+          <a href="venue.html" class="text-[#213874] font-medium hover:text-[#1a6ac3] transition">Venue</a>
+          <a href="https://tamsatanzania.org/eventsthe-17th-international-scientific-conference-15th-tamsa-general-assembly/application-form/" class="bg-[#1a6ac3] text-white px-4 py-2 rounded-md font-medium hover:bg-[#213874] transition">Register</a>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button id="menu-toggle" class="text-[#213874]">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden flex-col space-y-4 px-4 pb-4 bg-white/90 shadow-lg absolute top-16 left-0 w-full transition-all duration-300 transform -translate-y-4 opacity-0">
+      <a href="index.html" class="text-[#213874] font-medium hover:text-[#1a6ac3] transition">Home |</a>
+      <a href="#" class="text-[#213874] font-medium hover:text-[#1a6ac3] transition"> About |</a>
+      <a href="#" class="text-[#213874] font-medium hover:text-[#1a6ac3] transition"> Program |</a>
+      <a href="#" class="text-[#213874] font-medium hover:text-[#1a6ac3] transition"> Speakers |</a>
+      <a href="#" class="text-[#213874] font-medium hover:text-[#1a6ac3] transition"> Venue </a>
+      <a href="https://tamsatanzania.org/eventsthe-17th-international-scientific-conference-15th-tamsa-general-assembly/application-form/" class="bg-[#1a6ac3] text-white px-4 py-2 rounded-md font-medium hover:bg-[#213874] transition">Register</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Video Background -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden" style="background-color: #213874;">
+    <iframe
+        src="https://www.youtube.com/embed/A1ZEd66ISe4?autoplay=1&mute=1&controls=0&loop=1&playlist=A1ZEd66ISe4"
+        title="TAMSA Schedule"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        allowfullscreen
+        class="absolute inset-0 w-full h-full">
+    </iframe>
+    <div class="absolute inset-0" style="background: linear-gradient(rgba(33, 56, 116, 0.7), rgba(26, 106, 195, 0.5));"></div>
+    <div class="content-wrapper text-center px-4 relative z-10">
+      <div class="glass-card p-8 md:p-12 max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 text-shadow">15th TAMSA General Assembly</h1>
+        <p class="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto opacity-90">Join us for the 17th International Scientific Conference and 15th General Assembly</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="https://tamsatanzania.org/eventsthe-17th-international-scientific-conference-15th-tamsa-general-assembly/application-form/" 
+             class="px-8 py-3 rounded-md font-medium transition transform hover:scale-105" 
+             style="background-color: #f3ab1b; color: #213874;">Register Now</a>
+          <a href="#schedule" 
+             class="border-2 border-white text-white px-8 py-3 rounded-md font-medium hover:bg-white hover:text-[#213874] transition">View Schedule</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule / Timetable Section -->
+  <section id="schedule" class="bg-overlay bg-cover bg-center py-20" style="background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+    <div class="max-w-5xl mx-auto px-4 content-wrapper">
+      <h2 class="text-3xl font-bold mb-6 text-center text-white">Complete Event Schedule</h2>
+      
+      <!-- Day 1: October 6, 2025 - International Scientific Conference -->
+      <div class="mb-12 glass-card rounded-lg p-6">
+        <h3 class="text-2xl font-bold text-white mb-4">Day 1: October 6, 2025 - International Scientific Conference</h3>
+        <div class="overflow-x-auto rounded-lg shadow-lg">
+          <table class="min-w-full text-left border border-white/20">
+            <thead class="bg-[#1a6ac3] text-white">
+              <tr>
+                <th class="py-3 px-4">Time</th>
+                <th class="py-3 px-4">Session</th>
+                <th class="py-3 px-4">Speaker</th>
+                <th class="py-3 px-4">Location</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/20">
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">08:00 - 09:00</td>
+                <td class="py-3 px-4 text-white">Registration & Welcome Coffee</td>
+                <td class="py-3 px-4 text-white">-</td>
+                <td class="py-3 px-4 text-white">Main Lobby</td>
+              </tr>
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">09:00 - 10:00</td>
+                <td class="py-3 px-4 text-white">Opening Ceremony</td>
+                <td class="py-3 px-4 text-white">Dr. John Doe</td>
+                <td class="py-3 px-4 text-white">Main Hall</td>
+              </tr>
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">10:00 - 11:00</td>
+                <td class="py-3 px-4 text-white">Keynote: Global Health Initiatives in Medical Education</td>
+                <td class="py-3 px-4 text-white">Dr. Sarah Johnson</td>
+                <td class="py-3 px-4 text-white">Main Hall</td>
+              </tr>
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">11:00 - 11:30</td>
+                <td class="py-3 px-4 text-white">Coffee Break</td>
+                <td class="py-3 px-4 text-white">-</td>
+                <td class="py-3 px-4 text-white">Networking Area</td>
+              </tr>
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">11:30 - 13:00</td>
+                <td class="py-3 px-4 text-white">Research Paper Presentations</td>
+                <td class="py-3 px-4 text-white">Various Researchers</td>
+                <td class="py-3 px-4 text-white">Conference Room A & B</td>
+              </tr>
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">13:00 - 14:00</td>
+                <td class="py-3 px-4 text-white">Lunch Break</td>
+                <td class="py-3 px-4 text-white">-</td>
+                <td class="py-3 px-4 text-white">Dining Area</td>
+              </tr>
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">14:00 - 15:00</td>
+                <td class="py-3 px-4 text-white">Advances in Tropical Medicine Research</td>
+                <td class="py-3 px-4 text-white">Prof. Michael Thompson</td>
+                <td class="py-3 px-4 text-white">Main Hall</td>
+              </tr>
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">15:00 - 16:30</td>
+                <td class="py-3 px-4 text-white">Workshop: Medical Skills Training</td>
+                <td class="py-3 px-4 text-white">Dr. Jane Smith</td>
+                <td class="py-3 px-4 text-white">Skills Lab</td>
+              </tr>
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">16:30 - 17:00</td>
+                <td class="py-3 px-4 text-white">Networking Session</td>
+                <td class="py-3 px-4 text-white">-</td>
+                <td class="py-3 px-4 text-white">Networking Area</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <!-- Day 2: October 7, 2025 - General Assembly & Scientific Conference -->
+      <div class="mb-12 glass-card rounded-lg p-6">
+        <h3 class="text-2xl font-bold text-white mb-4">Day 2: October 7, 2025 - General Assembly & Scientific Conference</h3>
+        <div class="overflow-x-auto rounded-lg shadow-lg">
+          <table class="min-w-full text-left border border-white/20">
+            <thead class="bg-[#1a6ac3] text-white">
+              <tr>
+                <th class="py-3 px-4">Time</th>
+                <th class="py-3 px-4">Session</th>
+                <th class="py-3 px-4">Speaker</th>
+                <th class="py-3 px-4">Location</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/20">
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">08:00 - 09:00</td>
+                <td class="py-3 px-4 text-white">Registration & Welcome Coffee</td>
+                <td class="py-3 px-4 text-white">-</td>
+                <td class="py-3 px-4 text-white">Main Lobby</td>
+              </tr>
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">09:00 - 10:00</td>
+                <td class="py-3 px-4 text-white">Community Health and Preventive Medicine</td>
+                <td class="py-3 px-4 text-white">Dr. Amina Hassan</td>
+                <td class="py-3 px-4 text-white">Public Health Auditorium</td>
+              </tr>
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">10:00 - 11:00</td>
+                <td class="py-3 px-4 text-white">Keynote: Future of Healthcare in Africa</td>
+                <td class="py-3 px-4 text-white">Dr. Florence Temu</td>
+                <td class="py-3 px-4 text-white">Main Assembly Hall</td>
+              </tr>
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">11:00 - 11:30</td>
+                <td class="py-3 px-4 text-white">Coffee Break</td>
+                <td class="py-3 px-4 text-white">-</td>
+                <td class="py-3 px-4 text-white">Networking Area</td>
+              </tr>
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">11:30 - 13:00</td>
+                <td class="py-3 px-4 text-white">General Assembly Session 1</td>
+                <td class="py-3 px-4 text-white">TAMSA Leadership</td>
+                <td class="py-3 px-4 text-white">Main Assembly Hall</td>
+              </tr>
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">13:00 - 14:00</td>
+                <td class="py-3 px-4 text-white">Lunch Break</td>
+                <td class="py-3 px-4 text-white">-</td>
+                <td class="py-3 px-4 text-white">Dining Area</td>
+              </tr>
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">14:00 - 15:00</td>
+                <td class="py-3 px-4 text-white">Advancing Maternal Health in Africa</td>
+                <td class="py-3 px-4 text-white">Prof. Elizabeth Kama</td>
+                <td class="py-3 px-4 text-white">Women's Health Forum</td>
+              </tr>
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">15:00 - 16:30</td>
+                <td class="py-3 px-4 text-white">General Assembly Session 2: Elections</td>
+                <td class="py-3 px-4 text-white">Electoral Committee</td>
+                <td class="py-3 px-4 text-white">Main Assembly Hall</td>
+              </tr>
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">16:30 - 17:00</td>
+                <td class="py-3 px-4 text-white">Networking Session</td>
+                <td class="py-3 px-4 text-white">-</td>
+                <td class="py-3 px-4 text-white">Networking Area</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <!-- Day 3: October 8, 2025 - General Assembly & Closing -->
+      <div class="mb-12 glass-card rounded-lg p-6">
+        <h3 class="text-2xl font-bold text-white mb-4">Day 3: October 8, 2025 - General Assembly & Closing</h3>
+        <div class="overflow-x-auto rounded-lg shadow-lg">
+          <table class="min-w-full text-left border border-white/20">
+            <thead class="bg-[#1a6ac3] text-white">
+              <tr>
+                <th class="py-3 px-4">Time</th>
+                <th class="py-3 px-4">Session</th>
+                <th class="py-3 px-4">Speaker</th>
+                <th class="py-3 px-4">Location</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/20">
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">08:00 - 09:00</td>
+                <td class="py-3 px-4 text-white">Registration & Welcome Coffee</td>
+                <td class="py-3 px-4 text-white">-</td>
+                <td class="py-3 px-4 text-white">Main Lobby</td>
+              </tr>
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">09:00 - 10:00</td>
+                <td class="py-3 px-4 text-white">Digital Transformation in Healthcare</td>
+                <td class="py-3 px-4 text-white">Dr. Joseph Mwangi</td>
+                <td class="py-3 px-4 text-white">Innovation Hub</td>
+              </tr>
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">10:00 - 11:00</td>
+                <td class="py-3 px-4 text-white">General Assembly Session 3: Final Discussions</td>
+                <td class="py-3 px-4 text-white">TAMSA Leadership</td>
+                <td class="py-3 px-4 text-white">Main Assembly Hall</td>
+              </tr>
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">11:00 - 11:30</td>
+                <td class="py-3 px-4 text-white">Coffee Break</td>
+                <td class="py-3 px-4 text-white">-</td>
+                <td class="py-3 px-4 text-white">Networking Area</td>
+              </tr>
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">11:30 - 13:00</td>
+                <td class="py-3 px-4 text-white">General Assembly Session 4: Results Announcement</td>
+                <td class="py-3 px-4 text-white">Electoral Committee</td>
+                <td class="py-3 px-4 text-white">Main Assembly Hall</td>
+              </tr>
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">13:00 - 14:00</td>
+                <td class="py-3 px-4 text-white">Lunch Break</td>
+                <td class="py-3 px-4 text-white">-</td>
+                <td class="py-3 px-4 text-white">Dining Area</td>
+              </tr>
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">14:00 - 15:30</td>
+                <td class="py-3 px-4 text-white">Closing Ceremony & Handover</td>
+                <td class="py-3 px-4 text-white">Outgoing & Incoming Leadership</td>
+                <td class="py-3 px-4 text-white">Main Assembly Hall</td>
+              </tr>
+              <tr class="hover:bg-white/10 transition">
+                <td class="py-3 px-4 text-white">15:30 - 16:00</td>
+                <td class="py-3 px-4 text-white">Farewell & Group Photo</td>
+                <td class="py-3 px-4 text-white">All Delegates</td>
+                <td class="py-3 px-4 text-white">Main Lobby</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners Section -->
+  <section class="bg-overlay bg-cover bg-center py-20" style="background-image: url('https://images.unsplash.com/photo-1521791055366-0d86167b5486?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+    <div class="max-w-6xl mx-auto px-4 content-wrapper">
+      <h2 class="text-3xl font-bold mb-12 text-center text-white">Our Partners</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+        <div class="glass-card p-6 rounded-xl flex justify-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/World_Health_Organization_Logo.svg/1200px-World_Health_Organization_Logo.svg.png" alt="WHO" class="h-16 object-contain">
+        </div>
+        <div class="glass-card p-6 rounded-xl flex justify-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/IFMSA_logo.svg/1200px-IFMSA_logo.svg.png" alt="IFMSA" class="h-16 object-contain">
+        </div>
+        <div class="glass-card p-6 rounded-xl flex justify-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Ministry_of_Health_%28Tanzania%29_logo.png/800px-Ministry_of_Health_%28Tanzania%29_logo.png" alt="Tanzania Ministry of Health" class="h-16 object-contain">
+        </div>
+        <div class="glass-card p-6 rounded-xl flex justify-center">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Muhimbili_University_of_Health_and_Allied_Sciences_logo.png/800px-Muhimbili_University_of_Health_and_Allied_Sciences_logo.png" alt="MUHAS" class="h-16 object-contain">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="bg-overlay bg-cover bg-center py-20" style="background-image: url('https://images.unsplash.com/photo-1531545514256-b1400bc00f36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80')">
+    <div class="max-w-6xl mx-auto px-4 content-wrapper">
+      <h2 class="text-3xl font-bold mb-12 text-center text-white">Event Gallery</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="glass-card rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-105">
+          <img src="https://source.unsplash.com/random/600x400?conference1" alt="Event Photo 1" class="w-full h-64 object-cover">
+          <div class="p-4 text-white">
+            <h3 class="font-semibold">Opening Ceremony</h3>
+            <p class="text-sm opacity-80">Day 1, Main Hall</p>
+          </div>
+        </div>
+        <div class="glass-card rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-105">
+          <img src="https://source.unsplash.com/random/600x400?conference2" alt="Event Photo 2" class="w-full h-64 object-cover">
+          <div class="p-4 text-white">
+            <h3 class="font-semibold">Keynote Speech</h3>
+            <p class="text-sm opacity-80">Dr. Jane Smith</p>
+          </div>
+        </div>
+        <div class="glass-card rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-105">
+          <img src="https://source.unsplash.com/random/600x400?conference3" alt="Event Photo 3" class="w-full h-64 object-cover">
+          <div class="p-4 text-white">
+            <h3 class="font-semibold">Workshop Session</h3>
+            <p class="text-sm opacity-80">Interactive Learning</p>
+          </div>
+        </div>
+        <div class="glass-card rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-105">
+          <img src="https://source.unsplash.com/random/600x400?conference4" alt="Event Photo 4" class="w-full h-64 object-cover">
+          <div class="p-4 text-white">
+            <h3 class="font-semibold">Networking</h3>
+            <p class="text-sm opacity-80">Participants Connecting</p>
+          </div>
+        </div>
+        <div class="glass-card rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-105">
+          <img src="https://source.unsplash.com/random/600x400?conference5" alt="Event Photo 5" class="w-full h-64 object-cover">
+          <div class="p-4 text-white">
+            <h3 class="font-semibold">Panel Discussion</h3>
+            <p class="text-sm opacity-80">Experts Sharing Views</p>
+          </div>
+        </div>
+        <div class="glass-card rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-105">
+          <img src="https://source.unsplash.com/random/600x400?conference6" alt="Event Photo 6" class="w-full h-64 object-cover">
+          <div class="p-4 text-white">
+            <h3 class="font-semibold">Closing Remarks</h3>
+            <p class="text-sm opacity-80">Final Session</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="https://drive.google.com/YOUR_FOLDER_LINK_HERE" target="_blank" class="bg-[#1a6ac3] hover:bg-[#213874] text-white px-8 py-3 rounded-md font-medium transition inline-flex items-center">
+          <i class="fas fa-images mr-2"></i> View More Photos
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#213874] text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <img src="images/Picture1.png" alt="GA Logo" class="h-12 mb-4">
+          <p class="text-gray-300">TAMSA is a member of the International Federation for Medical Students' Associations (IFMSA), which is one of the world's oldest and largest student-run organizations recognized by the World Health Organization as an official international forum for Medical Students.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-300 hover:text-white transition">Home</a></li>
+            <li><a href="about.html" class="text-gray-300 hover:text-white transition">About</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition">Program</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition">Speakers</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition">Venue</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Contact</h3>
+          <ul class="space-y-2 text-gray-300">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+              <span>Muhimbili University of Health & Allied Sciences (MUHAS), United Nations Road, Upanga, Ilala Tanzania.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-envelope mt-1 mr-3"></i>
+              <span>scopi@tamsatanzania.org</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-phone-alt mt-1 mr-3"></i>
+              <span>+255 768 924 035</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-300 hover:text-white transition"><i class="fab fa-facebook-f text-xl"></i></a>
+            <a href="#" class="text-gray-300 hover:text-white transition"><i class="fab fa-twitter text-xl"></i></a>
+            <a href="https://www.instagram.com/tamsatanzania?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-gray-300 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
+            <a href="#" class="text-gray-300 hover:text-white transition"><i class="fab fa-linkedin-in text-xl"></i></a>
+            <a href="#" class="text-gray-300 hover:text-white transition"><i class="fab fa-youtube text-xl"></i></a>
+          </div>
+          <div class="mt-6">
+            <h4 class="font-medium mb-2">Subscribe to Newsletter</h4>
+            <div class="flex">
+              <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-md text-gray-900 w-full">
+              <button class="bg-[#1a6ac3] px-4 py-2 rounded-r-md hover:bg-[#213874] transition">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-300">
+        <p>&copy; 2025 TAMSA 15th GA and 17th ISC. All rights reserved.|Developed by MOFAS</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Toggle JS -->
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('opacity-0');
+      menu.classList.toggle('-translate-y-4');
+      
+      if (!menu.classList.contains('hidden')) {
+        setTimeout(() => {
+          menu.classList.remove('opacity-0');
+          menu.classList.remove('-translate-y-4');
+        }, 20);
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>

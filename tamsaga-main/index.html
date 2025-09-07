@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAMSA 15th GA & 17th ISC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Background Images for Sections */
+        .location-bg {
+            background-image: url('images/Dar_es_Salaam_\(Aerial\).jpg');
+        }
+        
+        .why-attend-bg {
+            background-image: url('images/mootcourt\ knockout.png');
+        }
+        
+        .speakers-bg {
+            background-image: url('images/Dar_es_Salaam_-_Posta.jpg');
+        }
+        
+        .stats-bg {
+            background-image: url('images/mootcourt\ knockout.png');
+        }
+        
+        .president-bg {
+            background-image: url('images/View_of_Panton_and_Dar_es_salaam_City_\(City_center\).jpg');
+        }
+        
+        .guest-bg {
+            background-image: url('images/Picture8.jpg');
+        }
+        
+        .live-bg {
+            background-image: url('images/Picture10.jpg');
+        }
+        
+        .activities-bg {
+            background-image: url('images/mootcourt\ knockout.png');
+        }
+        
+        .special-bg {
+            background-image: url('images/mootcourt\ knockout.png');
+        }
+        
+        .news-bg {
+            background-image: url('images/mootcourt\ knockout.png');
+        }
+        
+        .gallery-bg {
+            background-image: url('images/mootcourt\ knockout.png');
+        }
+        
+        .partners-bg {
+            background-image: url('images/mootcourt\ knockout.png');
+        }
+        
+        .cta-bg {
+            background-image: url('images/mootcourt\ knockout.png');
+        }
+    </style>
+    <link rel="icon" type="image/png" href="images/wite bg.png">
+
+</head>
+<body class="font-sans antialiased text-gray-800">
+    
+    <!-- Popup Modal -->
+    <div id="welcome-popup" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+        <div class="glass-effect rounded-xl shadow-2xl max-w-md mx-4 p-8 text-center" style="background: linear-gradient(135deg, rgba(33, 56, 116, 0.95), rgba(26, 106, 195, 0.95)); backdrop-filter: blur(10px);">
+            <div class="mb-6">
+                <img src="images/Picture1.png" alt="TAMSA Logo" class="w-20 h-20 mx-auto mb-4">
+                <h2 class="text-2xl font-bold text-white mb-2">Welcome to TAMSA GA 2025!</h2>
+                <p class="text-white opacity-90">Join us for the 15th General Assembly and 17th International Scientific Conference</p>
+            </div>
+            <div class="text-white mb-6">
+                <div class="flex items-center justify-center mb-3">
+                    <i class="fas fa-calendar-alt mr-2" style="color: #f3ab1b;"></i>
+                    <span>October 5-10, 2025</span>
+                </div>
+                <div class="flex items-center justify-center mb-3">
+                    <i class="fas fa-map-marker-alt mr-2" style="color: #f3ab1b;"></i>
+                    <span>Dar es Salaam, Tanzania</span>
+                </div>
+                <div class="flex items-center justify-center">
+                    <i class="fas fa-users mr-2" style="color: #f3ab1b;"></i>
+                    <span>300+ Expected Delegates</span>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3">
+                <a href="https://tamsatanzania.org/eventsthe-17th-international-scientific-conference-15th-tamsa-general-assembly/application-form/" 
+                   class="px-6 py-3 rounded-lg font-semibold transition transform hover:scale-105" 
+                   style="background-color: #f3ab1b; color: #213874;">Register Now</a>
+                <button id="close-popup" class="px-6 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-[#213874] transition">Explore Website</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Left Logo -->
+                <div class="flex items-center">
+                    <a href="#" class="flex-shrink-0">
+                        <img src="images/wite bg.png" alt="TAMSA Logo" class="h-12 w-12 rounded-full border-2" style="border-color: #213874;">
+                    </a>
+                </div>
+                
+                <!-- Center Navigation (Desktop) -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="font-medium transition" style="color: #213874;" onmouseover="this.style.color='#1a6ac3'" onmouseout="this.style.color='#213874'">Home</a>
+                    <a href="about.html" class="font-medium transition" style="color: #213874;" onmouseover="this.style.color='#1a6ac3'" onmouseout="this.style.color='#213874'">About</a>
+                    <a href="program.html" class="font-medium transition" style="color: #213874;" onmouseover="this.style.color='#1a6ac3'" onmouseout="this.style.color='#213874'">Program</a>
+                    <a href="speakers.html" class="font-medium transition" style="color: #213874;" onmouseover="this.style.color='#1a6ac3'" onmouseout="this.style.color='#213874'">Speakers</a>
+                    <a href="venue.html" class="font-medium transition" style="color: #213874;" onmouseover="this.style.color='#1a6ac3'" onmouseout="this.style.color='#213874'">Venue</a>
+                    <a href="https://tamsatanzania.org/eventsthe-17th-international-scientific-conference-15th-tamsa-general-assembly/application-form/" class="text-white px-4 py-2 rounded-md font-medium transition" style="background-color: #1a6ac3;" onmouseover="this.style.backgroundColor='#213874'" onmouseout="this.style.backgroundColor='#1a6ac3'">Register</a>
+                </div>
+                
+                <!-- Right Logo -->
+                <div class="hidden md:flex items-center">
+                    <a href="#" class="flex-shrink-0">
+                        <img src="images/Picture1.png" alt="GA Logo" class="h-12">
+                    </a>
+                </div>
+                
+                <!-- Mobile: Two Logos + Menu Button -->
+                <div class="md:hidden flex items-center space-x-4">
+                    <img src="images/Picture1.png" alt="GA Logo" class="h-10">
+                    <button id="menu-toggle" style="color: #213874;">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Sidebar Menu -->
+        <div id="mobile-menu" class="md:hidden hidden fixed top-16 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-40">
+            <div class="flex flex-col space-y-4 p-6">
+                <a href="index.html" class="font-medium transition py-2 border-b border-gray-200" style="color: #213874;" onmouseover="this.style.color='#1a6ac3'" onmouseout="this.style.color='#213874'">Home</a>
+                <a href="about.html" class="font-medium transition py-2 border-b border-gray-200" style="color: #213874;" onmouseover="this.style.color='#1a6ac3'" onmouseout="this.style.color='#213874'">About</a>
+                <a href="program.html" class="font-medium transition py-2 border-b border-gray-200" style="color: #213874;" onmouseover="this.style.color='#1a6ac3'" onmouseout="this.style.color='#213874'">Program</a>
+                <a href="speakers.html" class="font-medium transition py-2 border-b border-gray-200" style="color: #213874;" onmouseover="this.style.color='#1a6ac3'" onmouseout="this.style.color='#213874'">Speakers</a>
+                <a href="venue.html" class="font-medium transition py-2 border-b border-gray-200" style="color: #213874;" onmouseover="this.style.color='#1a6ac3'" onmouseout="this.style.color='#213874'">Venue</a>
+                <a href="https://tamsatanzania.org/eventsthe-17th-international-scientific-conference-15th-tamsa-general-assembly/application-form/" class="text-white px-4 py-3 rounded-md font-medium transition text-center mt-4" style="background-color: #1a6ac3;" onmouseover="this.style.backgroundColor='#213874'" onmouseout="this.style.backgroundColor='#1a6ac3'">Register</a>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-overlay" class="md:hidden hidden fixed inset-0 bg-black bg-opacity-50 z-30"></div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white relative overflow-hidden min-h-screen">
+        <div class="video-background">
+            <iframe
+                src="https://www.youtube.com/embed/pDjsJqfuraE?autoplay=1&mute=1&controls=0&loop=1&playlist=pDjsJqfuraE"
+                frameborder="0"
+                allow="autoplay; fullscreen"
+            ></iframe>
+            <div class="video-overlay"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+            <div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+                <div class="glass-effect p-8">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-shadow">15th General Assembly and 17th Scientific Conference</h1>
+                    <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-shadow">Hosted by Kairuki</h2>
+                    
+                    <div class="flex space-x-4 mb-10">
+                        <div class="countdown-item rounded-lg p-4 text-center w-20">
+                            <div class="text-2xl font-bold">28</div>
+                            <div class="text-sm">Days</div>
+                        </div>
+                        <div class="countdown-item rounded-lg p-4 text-center w-20">
+                            <div class="text-2xl font-bold">03</div>
+                            <div class="text-sm">Hours</div>
+                        </div>
+                        <div class="countdown-item rounded-lg p-4 text-center w-20">
+                            <div class="text-2xl font-bold">47</div>
+                            <div class="text-sm">Minutes</div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-xl mb-8">October 5-10, 2025 - Dar es salaam, Tanzania</p>
+                    <div class="flex space-x-4">
+                        <a href="https://tamsatanzania.org/eventsthe-17th-international-scientific-conference-15th-tamsa-general-assembly/application-form/" class="px-6 py-3 rounded-md font-medium transition transform hover:scale-105" style="background-color: #f3ab1b; color: #213874;">Register Now</a>
+                        <a href="login.html" class="border-2 border-white px-6 py-3 rounded-md font-medium text-white transition" style="background-color: rgba(26, 106, 195, 0.2);" onmouseover="this.style.backgroundColor='rgba(255, 255, 255, 0.9)'; this.style.color='#213874'" onmouseout="this.style.backgroundColor='rgba(26, 106, 195, 0.2)'; this.style.color='white'">Login to Pay</a>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <img src="images/Picture1.png" alt="GA logo" class="w-full max-w-md glass-effect">
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16" style="background: linear-gradient(to top, #213874, transparent);"></div>
+    </section>
+    
+    <!-- Location Section -->
+    <section class="py-20 location-bg parallax relative text-white">
+        <div class="section-overlay"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">We hope to see you in</h2>
+                <h3 class="text-2xl md:text-3xl font-semibold">Dar es Salaam, Tanzania</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="glass-effect p-8">
+                    <p class="mb-6">The Tanzania Medical Students Association (TAMSA) General Assembly is an annual meeting organized by the TAMSA, of which are conducted once in a year since 2010. It is the national body that represents all medical students in Tanzania. The General Assembly provides a platform for medical students to discuss relevant health issues, exchange ideas, and propose solutions to improve the health sector in Tanzania.</p>
+                    <p class="mb-6">The Tanzania Medical Students Association (TAMSA) International Scientific Conference is an annual event organized by TAMSA in collaboration with various Partners. It has been conducted once in a year since 2010.  The conference brings together medical students, healthcare professionals, Researchers, and experts from around the world to share and discuss trending healthcare Topics, research findings, innovations, and best practices in Healthcare. </p>
+                    <p>This Year we bring to you TAMSA marathon</p>
+                </div>
+                <div class="relative rounded-xl overflow-hidden shadow-xl hover-scale">
+                    <img src="images/download.jpg" alt="Dar es salaam, Tanzania" class="w-full h-auto">
+                    <div class="absolute inset-0" style="background-color: rgba(33, 56, 116, 0.2);"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black to-transparent">
+                        <h4 class="text-white text-xl font-semibold">Dar es salaam, Tanzania</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- Why Attend Section -->
+<section class="py-20 why-attend-bg parallax relative text-white">
+    <div class="section-overlay"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Attend?</h2>
+            <div class="w-24 h-1 bg-white mx-auto"></div>
+        </div>
+        
+        <div class="grid md:grid-cols-4 gap-8">
+            <div class="glass-effect p-8 hover-scale transition">
+                <div class="text-white mb-4">
+                    <i class="fas fa-users text-4xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Global Networking</h3>
+                <p>Connect with 300+ delegates, health leaders, and innovators from across Tanzania and beyond. Build meaningful collaborations that extend beyond the assembly.</p>
+            </div>
+            
+            <div class="glass-effect p-8 hover-scale transition">
+                <div class="text-white mb-4">
+                    <i class="fas fa-microscope text-4xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Innovative Discussions</h3>
+                <p>Engage in high-level panels and workshops on AI in healthcare, digital transformation, and the future of medical practice in Tanzania and the world.</p>
+            </div>
+            
+            <div class="glass-effect p-8 hover-scale transition">
+                <div class="text-white mb-4">
+                    <i class="fas fa-globe-africa text-4xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Cultural Exchange</h3>
+                <p>Celebrate the diversity of Tanzania through cultural nights, team-building activities, and unforgettable island excursions with fellow students and leaders.</p>
+            </div>
+
+            <div class="glass-effect p-8 hover-scale transition">
+                <div class="text-white mb-4">
+                    <i class="fas fa-vote-yea text-4xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Leadership Opportunities</h3>
+                <p>Participate in elections, debates, and constitutional reforms that shape the future of TAMSA. Be a voice, a voter, and a visionary for our collective progress.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Speakers Section -->
+    <section class="py-20 speakers-bg parallax relative text-white">
+        <div class="section-overlay"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured Speakers</h2>
+                <p class="text-xl">World-renowned experts joining us in Dar es salaam</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-effect rounded-xl overflow-hidden hover-scale transition">
+                    <div class="h-64 bg-blue-100 flex items-center justify-center">
+                        <img src="images/Pin on צהוב שחור.jpeg" alt="Speaker 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Dr. Sarah Johnson</h3>
+                        <p class="font-medium mb-3">Chief Medical Officer</p>
+                        <p class="mb-4">Leading expert in global health initiatives and medical education reform.</p>
+                        <a href="speaker-1.html" class="inline-block px-4 py-2 rounded-md font-medium text-white transition" style="background-color: #f3ab1b; color: #213874;">Biography</a>
+                    </div>
+                </div>
+                
+                <div class="glass-effect rounded-xl overflow-hidden hover-scale transition">
+                    <div class="h-64 bg-blue-100 flex items-center justify-center">
+                        <img src="images/Pin on צהוב שחור.jpeg" alt="Speaker 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Prof. Michael Thompson</h3>
+                        <p class="font-medium mb-3">Research Director</p>
+                        <p class="mb-4">Renowned researcher in tropical medicine and infectious diseases.</p>
+                        <a href="speaker-2.html" class="inline-block px-4 py-2 rounded-md font-medium text-white transition" style="background-color: #f3ab1b; color: #213874;">Biography</a>
+                    </div>
+                </div>
+                
+                <div class="glass-effect rounded-xl overflow-hidden hover-scale transition">
+                    <div class="h-64 bg-blue-100 flex items-center justify-center">
+                        <img src="images/Pin on צהוב שחור.jpeg" alt="Speaker 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Dr. Amina Hassan</h3>
+                        <p class="font-medium mb-3">Public Health Specialist</p>
+                        <p class="mb-4">Expert in community health and preventive medicine strategies.</p>
+                        <a href="speaker-3.html" class="inline-block px-4 py-2 rounded-md font-medium text-white transition" style="background-color: #f3ab1b; color: #213874;">Biography</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="py-20 stats-bg parallax relative text-white">
+        <div class="section-overlay"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="glass-effect p-6">
+                    <div class="text-5xl font-bold mb-2">16+</div>
+                    <div class="text-xl font-medium">CHAPTERS</div>
+                </div>
+                <div class="glass-effect p-6">
+                    <div class="text-5xl font-bold mb-2">180+</div>
+                    <div class="text-xl font-medium">DELEGATES</div>
+                </div>
+                <div class="glass-effect p-6">
+                    <div class="text-5xl font-bold mb-2">5</div>
+                    <div class="text-xl font-medium">MODALITIES</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- President Message -->
+    <section class="py-20 president-bg parallax relative text-white">
+        <div class="section-overlay"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="md:col-span-1 flex justify-center">
+                    <div class="relative">
+                        <img src="images/murtaza.jpeg" alt="Murtaza" class="rounded-lg shadow-xl w-full max-w-xs">
+                        <div class="absolute -bottom-4 -right-4 text-white p-4 rounded-lg shadow-lg" style="background-color: #1a6ac3;">
+                            <h3 class="font-bold">Murtaza Mzumbe</h3>
+                            <p class="text-sm">TAMSA President</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-2 glass-effect p-8">
+                    <h2 class="text-3xl font-bold mb-6">Dear TAMSA Family,</h2>
+                    <div class="space-y-4">
+                        <p>On behalf of the Tanzania Medical Students’ Association (TAMSA), it is with immense honor and heartfelt enthusiasm that I welcome you to participate in the 17th TAMSA International Scientific Conference and 15th General Assembly, scheduled to take place from 4th to 9th October in Dar es salaam, Tanzania.</p>
+                        <p>This prestigious annual gathering brings together medical students, young health professionals, researchers, policymakers, and key stakeholders from across Tanzania, Africa, and beyond, to engage in critical discussions, cutting-edge scientific presentations, leadership exchanges, and policy-shaping forums. As TAMSA, we believe that medical students are not just future healthcare professionals but also present-day changemakers.</p>
+                        <p>This conference is a call to amplify our collective voice and explore solutions to some of the continent’s most pressing health challenges.</p>
+                        <p>Your presence will not only enrich the conversations but also solidify our commitment to inclusivity and unity within the association. This is more than a conference, it is a movement, a gathering of visionaries and dedicated health advocates determined to transform systems, communities, and futures</p>
+                        <p>We look forward to welcoming you to this historic event and to the beautiful city of Dar es salaam.</p>
+                        <p class="font-semibold">TAMSA, COMMITTED TO SERVE,</p>
+                        <p class="font-bold">Murtaza</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Guest of Honour Section -->
+    <section class="py-20 guest-bg parallax relative text-white">
+        <div class="section-overlay"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Guest of Honour</h2>
+                <p class="text-xl">We are honored to welcome</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-12 items-center">
+                <div class="md:col-span-1 flex justify-center">
+                    <div class="relative">
+                        <img src="images/3zd8h9hr.png" alt="Dr. Florence Temu" class="rounded-lg shadow-xl w-full max-w-xs">
+                    </div>
+                </div>
+                <div class="md:col-span-2 glass-effect p-8">
+                    <h2 class="text-3xl font-bold mb-6">Dr. Florence Temu</h2>
+                    <h3 class="text-xl font-semibold mb-4" style="color: #f3ab1b;">Country Director, Amref Health Africa Tanzania</h3>
+                    <div class="space-y-4">
+                        <p>We are honored to welcome Dr. Florence Temu, the esteemed Country Director of Amref Health Africa Tanzania, as our Guest of Honour for the 15th General Assembly and 17th International Scientific Conference.</p>
+                        <p>Dr. Temu brings over 20 years of experience in healthcare leadership, program management, and organizational development across Africa. Her progressive career journey from Project Manager to Country Director exemplifies visionary leadership in health systems strengthening.</p>
+                        <p>As a strong advocate for medical education and capacity building, Dr. Temu has consistently supported initiatives that enhance healthcare delivery and professional development across the continent.</p>
+                    </div>
+                    <div class="mt-6">
+                        <a href="guest-of-honor.html" class="inline-block px-6 py-3 rounded-md font-medium text-white transition" style="background-color: #f3ab1b; color: #213874;">Full Biography</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Live Section -->
+    <section class="py-20 live-bg parallax relative text-white">
+        <div class="section-overlay"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Plenary Live</h2>
+                <p class="text-xl">Watch live on our Channel!</p>
+            </div>
+            
+            <div class="glass-effect rounded-xl overflow-hidden shadow-lg">
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe 
+                        class="w-full h-96" 
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ?controls=1&rel=0" 
+                        title="TAMSA GA 2025 Live Stream" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">GA 2025 Plenaries:</h3>
+                    <p class="text-sm mb-4 opacity-90">Watch live sessions during the conference. Stream will be active during event dates.</p>
+                    <div class="flex space-x-4 overflow-x-auto py-2">
+                        <div class="flex-shrink-0 w-64 dark-glass-effect p-4 rounded-lg">
+                            <div class="font-medium">Opening Ceremony (Marathon)</div>
+                            <div class="text-sm">October 4, 09:00 GMT</div>
+                        </div>
+                        <div class="flex-shrink-0 w-64 dark-glass-effect p-4 rounded-lg">
+                            <div class="font-medium">Medical Camp</div>
+                            <div class="text-sm">October 5, 09:00 GMT</div>
+                        </div>
+                        <div class="flex-shrink-0 w-64 dark-glass-effect p-4 rounded-lg">
+                            <div class="font-medium">International Scientific Conference</div>
+                            <div class="text-sm">October 7, 14:00 GMT</div>
+                        </div>
+                        <div class="flex-shrink-0 w-64 dark-glass-effect p-4 rounded-lg">
+                            <div class="font-medium">General Assembly</div>
+                            <div class="text-sm">October 8, 10:00 GMT</div>
+                        </div>
+                        <div class="flex-shrink-0 w-64 dark-glass-effect p-4 rounded-lg">
+                            <div class="font-medium">Closing Ceremony (Post GA)</div>
+                            <div class="text-sm">October 9, 16:00 GMT</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- Activities Section -->
+<section class="py-20 activities-bg parallax relative text-white">
+    <div class="section-overlay"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Activities</h2>
+            <p class="text-xl">Read more!</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Core Program -->
+            <div class="glass-effect rounded-xl overflow-hidden hover-scale transition">
+                <div class="h-48 bg-blue-100">
+                    <img src="/images/activities/core-program.jpg" alt="Core Program" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Core Program</h3>
+                    <p>
+                        Scientific Conference, General Assembly (elections, plenaries), and Standing Committee presentations (SCORA, SCOPH, SCORP, SCOPI, SCOME).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Health Engagement -->
+            <div class="glass-effect rounded-xl overflow-hidden hover-scale transition">
+                <div class="h-48 bg-blue-100">
+                    <img src="/images/activities/health-engagement.jpg" alt="Health Engagement" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Health Engagement</h3>
+                    <p>
+                        Medical outreach for underserved communities, NCD awareness marathon, and skill trainings with Aenon Healthcare.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Competitions & Showcases -->
+            <div class="glass-effect rounded-xl overflow-hidden hover-scale transition">
+                <div class="h-48 bg-blue-100">
+                    <img src="/images/activities/competitions.jpg" alt="Competitions" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Competitions & Showcases</h3>
+                    <p>
+                        Participate in the Ethical Moot Court, Publicity Challenge, and win awards like Best Innovation and Scientific Paper Prize.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Trainings & Workshops -->
+            <div class="glass-effect rounded-xl overflow-hidden hover-scale transition">
+                <div class="h-48 bg-blue-100">
+                    <img src="/images/activities/trainings.jpg" alt="Trainings & Workshops" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Trainings & Workshops</h3>
+                    <p>
+                        Learn medical skills like HIFU and customer care, explore digital health & AI tools, and sharpen your leadership and advocacy capabilities.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Social & Networking -->
+            <div class="glass-effect rounded-xl overflow-hidden hover-scale transition">
+                <div class="h-48 bg-blue-100">
+                    <img src="/images/activities/social-networking.jpg" alt="Social & Networking" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Social & Networking</h3>
+                    <p>
+                        Celebrate at Mbudya Island, join chapter bonding games, and immerse in cultural exchange moments with fellow delegates.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    <!-- Special Programs Section -->
+    <section class="py-20 special-bg parallax relative text-white">
+        <div class="section-overlay"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Special Programs</h2>
+                <p class="text-xl">Unique opportunities during the TAMSA GA</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-effect rounded-xl shadow-lg overflow-hidden hover-scale transition">
+                    <div class="h-48 bg-blue-50">
+                        <img src="images/Picture4.jpg" alt="Medicopreneur Program" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Medicopreneur Program</h3>
+                        <p class="mb-4">Bridging medicine and entrepreneurship through innovation workshops, mentorship, and pitch competitions. Develop healthcare solutions that matter.</p>
+                        <a href="medicopreneur.html" class="px-4 py-2 rounded-md font-medium text-white transition inline-block" style="background-color: #f3ab1b; color: #213874;">Join Program</a>
+                    </div>
+                </div>
+                
+                <div class="glass-effect rounded-xl shadow-lg overflow-hidden hover-scale transition">
+                    <div class="h-48 bg-blue-50">
+                        <img src="images/Picture4.jpg" alt="Training with AENON" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Training with AENON</h3>
+                        <p class="mb-4">Get certified training in emergency medicine and receive Continuing Professional Development (CPD) credits recognized internationally.</p>
+                        <a href="workshop.html" class="px-4 py-2 rounded-md font-medium text-white transition inline-block" style="background-color: #f3ab1b; color: #213874;">Register Now</a>
+                    </div>
+                </div>
+                
+                <div class="glass-effect rounded-xl shadow-lg overflow-hidden hover-scale transition">
+                    <div class="h-48 bg-blue-50">
+                        <img src="images/Picture5.jpg" alt="Medical Marathon" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Medical Marathon</h3>
+                        <p class="mb-4">Join our charity run supporting healthcare initiatives in Tanzania. A fun way to network while contributing to a good cause.</p>
+                        <a href="marathon.html" class="px-4 py-2 rounded-md font-medium text-white transition inline-block" style="background-color: #f3ab1b; color: #213874;">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- News Section -->
+    <section class="py-20 news-bg parallax relative text-white">
+        <div class="section-overlay"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">News</h2>
+                <p class="text-xl">Stay tuned!</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-effect rounded-xl shadow-md overflow-hidden hover-scale transition">
+                    <div class="h-48 bg-gray-300"></div>
+                    <div class="p-6">
+                        <div class="text-sm mb-2">July 12, 2025  04:03</div>
+                        <h3 class="text-xl font-bold mb-2">Registration Now Open</h3>
+                        <p>Early bird registration for GA. Secure your spot today!</p>
+                    </div>
+                </div>
+                
+                <div class="glass-effect rounded-xl shadow-md overflow-hidden hover-scale transition">
+                    <div class="h-48 bg-gray-300"></div>
+                    <div class="p-6">
+                        <div class="text-sm mb-2">May 30, 2025  11:27</div>
+                        <h3 class="text-xl font-bold mb-2">Program Schedule Released</h3>
+                        <p>Check out the ivitation package for this years GA.</p>
+                    </div>
+                </div>
+                
+                <div class="glass-effect rounded-xl shadow-md overflow-hidden hover-scale transition">
+                    <div class="h-48 bg-gray-300"></div>
+                    <div class="p-6">
+                        <div class="text-sm mb-2">June 15, 2025  09:45</div>
+                        <h3 class="text-xl font-bold mb-2">Call for Abstracts</h3>
+                        <p>Submit your research and workshop proposals for TAMSA GA.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery Section -->
+    <section class="py-20 gallery-bg parallax relative text-white">
+        <div class="section-overlay"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Gallery</h2>
+                <p class="text-xl">TAMSA General Assembly</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="h-48 bg-gray-300 rounded-lg overflow-hidden">
+                    <img src="images/about.jpg" alt="Conference" class="w-full h-full object-cover">
+                </div>
+                <div class="h-48 bg-gray-300 rounded-lg overflow-hidden">
+                    <img src="images/Picture2.jpg" alt="Group Discussion" class="w-full h-full object-cover">
+                </div>
+                <div class="h-48 bg-gray-300 rounded-lg overflow-hidden">
+                    <img src="images/Picture4.jpg" alt="Workshop" class="w-full h-full object-cover">
+                </div>
+                <div class="h-48 bg-gray-300 rounded-lg overflow-hidden">
+                    <img src="images/Picture5.jpg" alt="Networking" class="w-full h-full object-cover">
+                </div>
+                <div class="h-48 bg-gray-300 rounded-lg overflow-hidden">
+                    <img src="images/Picture6.jpg" alt="Concert" class="w-full h-full object-cover">
+                </div>
+                <div class="h-48 bg-gray-300 rounded-lg overflow-hidden">
+                    <img src="images/Picture3.jpg" alt="Cultural Event" class="w-full h-full object-cover">
+                </div>
+                <div class="h-48 bg-gray-300 rounded-lg overflow-hidden">
+                    <img src="images/Picture7.jpg" alt="Award Ceremony" class="w-full h-full object-cover">
+                </div>
+                <div class="h-48 bg-gray-300 rounded-lg overflow-hidden">
+                    <img src="images/Picture1.png" alt="Group Photo" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Partners Section -->
+    <section class="py-20 partners-bg parallax relative text-white">
+        <div class="section-overlay"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Partners</h2>
+                <p class="text-xl">Collaborating for better global health education and research</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
+                <!-- WHO -->
+                <div class="flex justify-center group">
+                    <a href="https://www.who.int/" target="_blank" class="partner-logo-container relative block transition-all duration-300 transform hover:-translate-y-3 hover:scale-110">
+                        <div class="partner-logo-card bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-lg group-hover:shadow-2xl group-hover:bg-opacity-20 transition-all duration-300">
+                            <img src="images/wite bg.png" alt="World Health Organization" class="h-16 w-16 mx-auto object-contain filter brightness-0 invert group-hover:filter-none transition-all duration-300">
+                            <div class="partner-name absolute -top-12 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-80 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                World Health Organization
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- UNICEF -->
+                <div class="flex justify-center group">
+                    <a href="https://www.unicef.org/" target="_blank" class="partner-logo-container relative block transition-all duration-300 transform hover:-translate-y-3 hover:scale-110">
+                        <div class="partner-logo-card bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-lg group-hover:shadow-2xl group-hover:bg-opacity-20 transition-all duration-300">
+                            <img src="images/wite bg.png" alt="UNICEF" class="h-16 w-16 mx-auto object-contain filter brightness-0 invert group-hover:filter-none transition-all duration-300">
+                            <div class="partner-name absolute -top-12 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-80 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                UNICEF
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Tanzania Ministry of Health -->
+                <div class="flex justify-center group">
+                    <a href="https://www.moh.go.tz/" target="_blank" class="partner-logo-container relative block transition-all duration-300 transform hover:-translate-y-3 hover:scale-110">
+                        <div class="partner-logo-card bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-lg group-hover:shadow-2xl group-hover:bg-opacity-20 transition-all duration-300">
+                            <img src="images/wite bg.png" alt="Tanzania Ministry of Health" class="h-16 w-16 mx-auto object-contain filter brightness-0 invert group-hover:filter-none transition-all duration-300">
+                            <div class="partner-name absolute -top-12 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-80 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                Tanzania Ministry of Health
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- IFMSA -->
+                <div class="flex justify-center group">
+                    <a href="https://ifmsa.org/" target="_blank" class="partner-logo-container relative block transition-all duration-300 transform hover:-translate-y-3 hover:scale-110">
+                        <div class="partner-logo-card bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-lg group-hover:shadow-2xl group-hover:bg-opacity-20 transition-all duration-300">
+                            <img src="images/wite bg.png" alt="IFMSA" class="h-16 w-16 mx-auto object-contain filter brightness-0 invert group-hover:filter-none transition-all duration-300">
+                            <div class="partner-name absolute -top-12 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-80 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                International Federation of Medical Students' Associations
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Kairuki University -->
+                <div class="flex justify-center group">
+                    <a href="https://kairuki.ac.tz/" target="_blank" class="partner-logo-container relative block transition-all duration-300 transform hover:-translate-y-3 hover:scale-110">
+                        <div class="partner-logo-card bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-lg group-hover:shadow-2xl group-hover:bg-opacity-20 transition-all duration-300">
+                            <img src="images/wite bg.png" alt="Kairuki University" class="h-16 w-16 mx-auto object-contain filter brightness-0 invert group-hover:filter-none transition-all duration-300">
+                            <div class="partner-name absolute -top-12 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-80 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                Kairuki University
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Muhimbili University -->
+                <div class="flex justify-center group">
+                    <a href="https://www.muhas.ac.tz/" target="_blank" class="partner-logo-container relative block transition-all duration-300 transform hover:-translate-y-3 hover:scale-110">
+                        <div class="partner-logo-card bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-lg group-hover:shadow-2xl group-hover:bg-opacity-20 transition-all duration-300">
+                            <img src="images/wite bg.png" alt="Muhimbili University" class="h-16 w-16 mx-auto object-contain filter brightness-0 invert group-hover:filter-none transition-all duration-300">
+                            <div class="partner-name absolute -top-12 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-80 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                Muhimbili University of Health and Allied Sciences
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Tanzania Medical Association -->
+                <div class="flex justify-center group">
+                    <a href="https://www.tma.or.tz/" target="_blank" class="partner-logo-container relative block transition-all duration-300 transform hover:-translate-y-3 hover:scale-110">
+                        <div class="partner-logo-card bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-lg group-hover:shadow-2xl group-hover:bg-opacity-20 transition-all duration-300">
+                            <img src="images/wite bg.png" alt="Tanzania Medical Association" class="h-16 w-16 mx-auto object-contain filter brightness-0 invert group-hover:filter-none transition-all duration-300">
+                            <div class="partner-name absolute -top-12 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-80 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                Tanzania Medical Association
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- USAID -->
+                <div class="flex justify-center group">
+                    <a href="https://www.usaid.gov/" target="_blank" class="partner-logo-container relative block transition-all duration-300 transform hover:-translate-y-3 hover:scale-110">
+                        <div class="partner-logo-card bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-lg group-hover:shadow-2xl group-hover:bg-opacity-20 transition-all duration-300">
+                            <img src="images/wite bg.png" alt="USAID" class="h-16 w-16 mx-auto object-contain filter brightness-0 invert group-hover:filter-none transition-all duration-300">
+                            <div class="partner-name absolute -top-12 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-80 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                USAID Tanzania
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- World Bank -->
+                <div class="flex justify-center group">
+                    <a href="https://www.worldbank.org/" target="_blank" class="partner-logo-container relative block transition-all duration-300 transform hover:-translate-y-3 hover:scale-110">
+                        <div class="partner-logo-card bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-lg group-hover:shadow-2xl group-hover:bg-opacity-20 transition-all duration-300">
+                            <img src="images/wite bg.png" alt="World Bank" class="h-16 w-16 mx-auto object-contain filter brightness-0 invert group-hover:filter-none transition-all duration-300">
+                            <div class="partner-name absolute -top-12 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-80 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                World Bank Group
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- CDC -->
+                <div class="flex justify-center group">
+                    <a href="https://www.cdc.gov/" target="_blank" class="partner-logo-container relative block transition-all duration-300 transform hover:-translate-y-3 hover:scale-110">
+                        <div class="partner-logo-card bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 shadow-lg group-hover:shadow-2xl group-hover:bg-opacity-20 transition-all duration-300">
+                            <img src="images/wite bg.png" alt="CDC" class="h-16 w-16 mx-auto object-contain filter brightness-0 invert group-hover:filter-none transition-all duration-300">
+                            <div class="partner-name absolute -top-12 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-80 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                Centers for Disease Control and Prevention
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-20 cta-bg parallax relative text-white">
+        <div class="section-overlay"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Join Us in Dar es Salaam?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Be part of this transformative experience that will shape the future of global health and medical education.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="https://tamsatanzania.org/eventsthe-17th-international-scientific-conference-15th-tamsa-general-assembly/application-form/" class="px-8 py-3 rounded-md font-medium transition" style="background-color: #ffffff; color: #213874;" onmouseover="this.style.backgroundColor='#f3f3f3'" onmouseout="this.style.backgroundColor='#ffffff'">Register Now</a>
+                <a href="about.html" class="border border-white px-8 py-3 rounded-md font-medium text-white transition" onmouseover="this.style.backgroundColor='white'; this.style.color='#213874'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='white'">Contact Us</a>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+    
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Popup functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const popup = document.getElementById('welcome-popup');
+            const closeBtn = document.getElementById('close-popup');
+            
+            // Show popup after 1 second
+            setTimeout(function() {
+                popup.classList.remove('hidden');
+                popup.style.animation = 'fadeIn 0.5s ease-out';
+            }, 1000);
+            
+            // Close popup when close button is clicked
+            closeBtn.addEventListener('click', function() {
+                popup.style.animation = 'fadeOut 0.3s ease-in';
+                setTimeout(function() {
+                    popup.classList.add('hidden');
+                }, 300);
+            });
+            
+            // Close popup when clicking outside
+            popup.addEventListener('click', function(e) {
+                if (e.target === popup) {
+                    popup.style.animation = 'fadeOut 0.3s ease-in';
+                    setTimeout(function() {
+                        popup.classList.add('hidden');
+                    }, 300);
+                }
+            });
+        });
+        
+        // Simple countdown timer
+        function updateCountdown() {
+            const eventDate = new Date('October 5, 2025 00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            
+            const daysEl = document.querySelector('.countdown-item:nth-child(1) div:first-child');
+            const hoursEl = document.querySelector('.countdown-item:nth-child(2) div:first-child');
+            const minutesEl = document.querySelector('.countdown-item:nth-child(3) div:first-child');
+            
+            if (daysEl) daysEl.textContent = days;
+            if (hoursEl) hoursEl.textContent = hours;
+            if (minutesEl) minutesEl.textContent = minutes;
+        }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 60000);
+    </script>
+</body>
+</html>

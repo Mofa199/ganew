@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAMSA GA Activities</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/wite bg.png">
+</head>
+<body class="font-sans">
+    <!-- Header Container -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section with Video Background -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden" style="background-color: #213874;">
+        <div class="video-background">
+            <iframe
+                src="https://www.youtube.com/embed/A1ZEd66ISe4?autoplay=1&mute=1&controls=0&loop=1&playlist=A1ZEd66ISe4"
+                title="TAMSA Program"
+                frameborder="0"
+                allow="autoplay; fullscreen"
+                allowfullscreen
+                class="absolute inset-0 w-full h-full">
+            </iframe>
+        </div>
+        <div class="absolute inset-0" style="background: linear-gradient(rgba(33, 56, 116, 0.7), rgba(26, 106, 195, 0.5));"></div>
+        <div class="content-wrapper text-center px-4 z-10 relative">
+            <div class="glass-effect p-8 md:p-12 max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 fade-in text-shadow">Our Program</h1>
+                <p class="text-xl text-white max-w-2xl mx-auto fade-in delay-1 opacity-90 mb-8">Explore our comprehensive program featuring four main events: Medical Camp, General Assembly, International Scientific Conference, and Post GA activities</p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#main-events" class="px-6 py-3 rounded-lg font-semibold transition transform hover:scale-105" style="background-color: #f3ab1b; color: #213874;">View Main Events</a>
+                    <a href="schedule.html" class="border-2 border-white px-6 py-3 rounded-lg font-semibold text-white hover:bg-white hover:text-[#213874] transition">Full Schedule</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Events Section -->
+    <section id="main-events" class="py-16 bg-gradient-to-br from-blue-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4" style="color: #213874;">Main Events</h2>
+                <div class="w-24 h-1 mx-auto mb-6" style="background-color: #f3ab1b;"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our comprehensive program consists of four major events designed to enhance medical education, professional development, and international collaboration.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Medical Camp -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800"></div>
+                    <div class="relative p-8 text-white">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background-color: #f3ab1b;">
+                                <i class="fas fa-user-md text-2xl" style="color: #213874;"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-2xl font-bold">Medical Camp</h3>
+                                <p class="text-blue-200">Community Outreach</p>
+                            </div>
+                        </div>
+                        <p class="text-lg mb-6 opacity-90">Free healthcare services, health education, and medical screenings for underserved communities in Dar es Salaam.</p>
+                        <div class="space-y-2 mb-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-calendar-alt mr-3" style="color: #f3ab1b;"></i>
+                                <span>October 5, 2025</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-clock mr-3" style="color: #f3ab1b;"></i>
+                                <span>8:00 AM - 4:00 PM</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marker-alt mr-3" style="color: #f3ab1b;"></i>
+                                <span>Temeke District</span>
+                            </div>
+                        </div>
+                        <a href="camp.html" class="inline-flex items-center px-6 py-3 rounded-lg font-semibold transition-colors" style="background-color: #f3ab1b; color: #213874;" onmouseover="this.style.backgroundColor='#e09915'" onmouseout="this.style.backgroundColor='#f3ab1b'">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- General Assembly -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="absolute inset-0 bg-gradient-to-br from-green-600 to-green-800"></div>
+                    <div class="relative p-8 text-white">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background-color: #f3ab1b;">
+                                <i class="fas fa-users text-2xl" style="color: #213874;"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-2xl font-bold">General Assembly</h3>
+                                <p class="text-green-200">Governance & Elections</p>
+                            </div>
+                        </div>
+                        <p class="text-lg mb-6 opacity-90">Annual governance meetings, policy decisions, elections, and strategic planning for TAMSA's future direction.</p>
+                        <div class="space-y-2 mb-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-calendar-alt mr-3" style="color: #f3ab1b;"></i>
+                                <span>October 6-7, 2025</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-clock mr-3" style="color: #f3ab1b;"></i>
+                                <span>9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marker-alt mr-3" style="color: #f3ab1b;"></i>
+                                <span>Kairuki University</span>
+                            </div>
+                        </div>
+                        <a href="ga.html" class="inline-flex items-center px-6 py-3 rounded-lg font-semibold transition-colors" style="background-color: #f3ab1b; color: #213874;" onmouseover="this.style.backgroundColor='#e09915'" onmouseout="this.style.backgroundColor='#f3ab1b'">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- International Scientific Conference -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-purple-800"></div>
+                    <div class="relative p-8 text-white">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background-color: #f3ab1b;">
+                                <i class="fas fa-microscope text-2xl" style="color: #213874;"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-2xl font-bold">International Scientific Conference</h3>
+                                <p class="text-purple-200">Research & Innovation</p>
+                            </div>
+                        </div>
+                        <p class="text-lg mb-6 opacity-90">Cutting-edge research presentations, scientific discussions, and innovation showcases from medical students worldwide.</p>
+                        <div class="space-y-2 mb-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-calendar-alt mr-3" style="color: #f3ab1b;"></i>
+                                <span>October 8-9, 2025</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-clock mr-3" style="color: #f3ab1b;"></i>
+                                <span>8:00 AM - 7:00 PM</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marker-alt mr-3" style="color: #f3ab1b;"></i>
+                                <span>Kairuki University</span>
+                            </div>
+                        </div>
+                        <a href="isc.html" class="inline-flex items-center px-6 py-3 rounded-lg font-semibold transition-colors" style="background-color: #f3ab1b; color: #213874;" onmouseover="this.style.backgroundColor='#e09915'" onmouseout="this.style.backgroundColor='#f3ab1b'">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Post GA -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="absolute inset-0 bg-gradient-to-br from-orange-600 to-orange-800"></div>
+                    <div class="relative p-8 text-white">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background-color: #f3ab1b;">
+                                <i class="fas fa-running text-2xl" style="color: #213874;"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-2xl font-bold">Post GA</h3>
+                                <p class="text-orange-200">Cultural & Social</p>
+                            </div>
+                        </div>
+                        <p class="text-lg mb-6 opacity-90">Cultural celebrations, social events, networking opportunities, and the Tanzania Marathon for delegates.</p>
+                        <div class="space-y-2 mb-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-calendar-alt mr-3" style="color: #f3ab1b;"></i>
+                                <span>October 10, 2025</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-clock mr-3" style="color: #f3ab1b;"></i>
+                                <span>6:00 AM - 10:00 PM</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marker-alt mr-3" style="color: #f3ab1b;"></i>
+                                <span>Various Locations</span>
+                            </div>
+                        </div>
+                        <a href="post-ga.html" class="inline-flex items-center px-6 py-3 rounded-lg font-semibold transition-colors" style="background-color: #f3ab1b; color: #213874;" onmouseover="this.style.backgroundColor='#e09915'" onmouseout="this.style.backgroundColor='#f3ab1b'">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-16 relative" style="background: linear-gradient(135deg, #213874 0%, #1a6ac3 50%, #213874 100%);">
+        <div class="absolute inset-0" style="background: rgba(0, 0, 0, 0.1);"></div>
+        <div class="content-wrapper container mx-auto px-4 relative z-10">
+            <div class="glass-effect p-8 rounded-xl" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);">
+                <h2 class="text-3xl font-bold text-center text-white mb-6">Filter Activities</h2>
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <button class="filter-btn active px-6 py-3 rounded-full border-2 text-white font-medium transition-all duration-300 shadow-lg" style="border-color: #f3ab1b; background-color: #f3ab1b; color: #213874;" data-filter="all" onmouseover="this.style.backgroundColor='white'; this.style.color='#213874'" onmouseout="this.style.backgroundColor='#f3ab1b'; this.style.color='#213874'">All Activities</button>
+                    <button class="filter-btn px-6 py-3 rounded-full border-2 border-white text-white font-medium transition-all duration-300 shadow-lg" data-filter="workshop" onmouseover="this.style.backgroundColor='white'; this.style.color='#213874'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='white'">Workshops</button>
+                    <button class="filter-btn px-6 py-3 rounded-full border-2 border-white text-white font-medium transition-all duration-300 shadow-lg" data-filter="plenary" onmouseover="this.style.backgroundColor='white'; this.style.color='#213874'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='white'">Plenaries</button>
+                    <button class="filter-btn px-6 py-3 rounded-full border-2 border-white text-white font-medium transition-all duration-300 shadow-lg" data-filter="social" onmouseover="this.style.backgroundColor='white'; this.style.color='#213874'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='white'">Social Events</button>
+                    <button class="filter-btn px-6 py-3 rounded-full border-2 border-white text-white font-medium transition-all duration-300 shadow-lg" data-filter="committee" onmouseover="this.style.backgroundColor='white'; this.style.color='#213874'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='white'">Committee Meetings</button>
+                </div>
+                
+                <div class="flex justify-center mb-8">
+                    <div class="relative w-full max-w-md">
+                        <input type="text" id="activity-search" placeholder="Search activities..." class="w-full px-6 py-3 rounded-full border-2 focus:outline-none focus:ring-2 focus:border-transparent text-gray-800" style="border-color: #f3ab1b;">
+                        <button class="absolute right-3 top-3 hover:text-blue-500" style="color: #213874;" id="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Grid -->
+    <section class="py-16" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #f8f9fa 100%); position: relative;">
+        <div class="absolute inset-0" style="background: rgba(26, 106, 195, 0.05);"></div>
+        <div class="content-wrapper container mx-auto px-4 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4" style="color: #213874;">Conference Activities</h2>
+                <div class="w-24 h-1 mx-auto mb-6" style="background-color: #f3ab1b;"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Explore our diverse range of activities designed to enhance your conference experience</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Activity Card 1 -->
+                <div class="activity-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-category="workshop">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Workshop" class="w-full h-48 object-cover">
+                        <div class="absolute bottom-0 left-0 text-white px-3 py-1 text-sm font-medium" style="background-color: #1a6ac3;">Workshop</div>
+                        <div class="activity-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <a href="#" class="px-6 py-2 rounded-full font-medium transition" style="background-color: white; color: #1a6ac3;" onmouseover="this.style.backgroundColor='#1a6ac3'; this.style.color='white'" onmouseout="this.style.backgroundColor='white'; this.style.color='#1a6ac3'">View Details</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2" style="color: #213874;">Leadership Development Workshop</h3>
+                        <p class="text-gray-600 mb-4">Enhance your leadership skills with this interactive workshop designed for future healthcare leaders.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center text-gray-500">
+                                <i class="far fa-calendar-alt mr-2"></i>
+                                <span>Oct 6, 2025</span>
+                            </div>
+                            <div class="flex items-center text-gray-500">
+                                <i class="far fa-clock mr-2"></i>
+                                <span>14:00 - 16:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activity Card 2 -->
+                <div class="activity-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-category="plenary">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1431540015161-0bf868a2e407?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Plenary" class="w-full h-48 object-cover">
+                        <div class="absolute bottom-0 left-0 text-white px-3 py-1 text-sm font-medium" style="background-color: #f3ab1b; color: #213874;">Plenary</div>
+                        <div class="activity-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <a href="#" class="px-6 py-2 rounded-full font-medium transition" style="background-color: white; color: #1a6ac3;" onmouseover="this.style.backgroundColor='#1a6ac3'; this.style.color='white'" onmouseout="this.style.backgroundColor='white'; this.style.color='#1a6ac3'">View Details</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2" style="color: #213874;">Opening Ceremony</h3>
+                        <p class="text-gray-600 mb-4">Official opening of the TAMSA General Assembly with keynote speeches and cultural performances.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center text-gray-500">
+                                <i class="far fa-calendar-alt mr-2"></i>
+                                <span>Oct 6, 2025</span>
+                            </div>
+                            <div class="flex items-center text-gray-500">
+                                <i class="far fa-clock mr-2"></i>
+                                <span>08:00 - 09:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activity Card 3 -->
+                <div class="activity-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-category="social">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Social Event" class="w-full h-48 object-cover">
+                        <div class="absolute bottom-0 left-0 text-white px-3 py-1 text-sm font-medium" style="background-color: #213874;">Social Event</div>
+                        <div class="activity-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <a href="#" class="px-6 py-2 rounded-full font-medium transition" style="background-color: white; color: #1a6ac3;" onmouseover="this.style.backgroundColor='#1a6ac3'; this.style.color='white'" onmouseout="this.style.backgroundColor='white'; this.style.color='#1a6ac3'">View Details</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2" style="color: #213874;">Mbudya Island Excursion</h3>
+                        <p class="text-gray-600 mb-4">Cultural celebration and team bonding activities at the beautiful Mbudya Island.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center text-gray-500">
+                                <i class="far fa-calendar-alt mr-2"></i>
+                                <span>Oct 8, 2025</span>
+                            </div>
+                            <div class="flex items-center text-gray-500">
+                                <i class="far fa-clock mr-2"></i>
+                                <span>Full Day</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="mt-12 flex justify-center">
+                <nav class="flex items-center space-x-2" id="pagination-nav">
+                    <button class="px-4 py-2 border rounded-md transition-all duration-300" style="border-color: #1a6ac3; color: #1a6ac3;" id="prev-page" disabled onmouseover="this.style.backgroundColor='#1a6ac3'; this.style.color='white'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#1a6ac3'">&laquo; Previous</button>
+                    <div class="flex space-x-2" id="page-numbers"></div>
+                    <button class="px-4 py-2 border rounded-md transition-all duration-300" style="border-color: #1a6ac3; color: #1a6ac3;" id="next-page" onmouseover="this.style.backgroundColor='#1a6ac3'; this.style.color='white'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#1a6ac3'">Next &raquo;</button>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Activities Section -->
+    <section id="activities" class="py-16" style="background-image: linear-gradient(rgba(33, 56, 116, 0.8), rgba(26, 106, 195, 0.8)), url('images/mootcourt\ knockout.png'); background-size: cover; background-position: center; background-attachment: fixed;">
+        <div class="content-wrapper container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Featured Activities</h2>
+                <div class="w-24 h-1 mx-auto mb-6" style="background-color: #f3ab1b;"></div>
+                <p class="text-xl text-white max-w-3xl mx-auto">Discover the diverse range of activities designed to enhance your medical education, professional development, and global health perspective</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Activity Card 1: Medical Education -->
+                <div class="glass-effect rounded-xl shadow-lg overflow-hidden transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6 bg-white bg-opacity-90">
+                        <h3 class="text-xl font-bold mb-3" style="color: #213874;">Medical Education Excellence</h3>
+                        <p class="text-gray-700 mb-4">Workshops, seminars, and training sessions designed to enhance clinical skills, research methodology, and evidence-based practice.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-medium" style="background-color: #f3ab1b; color: #213874;">Workshops</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-medium" style="background-color: #1a6ac3; color: white;">Training</span>
+                        </div>
+                        <a href="#" class="text-white font-medium transition flex items-center px-4 py-2 rounded-lg" style="background-color: #1a6ac3;" onmouseover="this.style.backgroundColor='#213874'" onmouseout="this.style.backgroundColor='#1a6ac3'">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Activity Card 2: Global Health -->
+                <div class="glass-effect rounded-xl shadow-lg overflow-hidden transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center">
+                        <i class="fas fa-globe-americas text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6 bg-white bg-opacity-90">
+                        <h3 class="text-xl font-bold mb-3" style="color: #213874;">Global Health Initiatives</h3>
+                        <p class="text-gray-700 mb-4">Engage in international health projects, advocacy campaigns, and policy discussions addressing global health challenges.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-medium" style="background-color: #f3ab1b; color: #213874;">Advocacy</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-medium" style="background-color: #1a6ac3; color: white;">Policy</span>
+                        </div>
+                        <a href="#" class="text-white font-medium transition flex items-center px-4 py-2 rounded-lg" style="background-color: #1a6ac3;" onmouseover="this.style.backgroundColor='#213874'" onmouseout="this.style.backgroundColor='#1a6ac3'">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Activity Card 3: Research Innovation -->
+                <div class="glass-effect rounded-xl shadow-lg overflow-hidden transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
+                        <i class="fas fa-microscope text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6 bg-white bg-opacity-90">
+                        <h3 class="text-xl font-bold mb-3" style="color: #213874;">Research & Innovation</h3>
+                        <p class="text-gray-700 mb-4">Participate in cutting-edge research projects, innovation challenges, and scientific publications to advance medical knowledge.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-medium" style="background-color: #f3ab1b; color: #213874;">Research</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-medium" style="background-color: #1a6ac3; color: white;">Innovation</span>
+                        </div>
+                        <a href="#" class="text-white font-medium transition flex items-center px-4 py-2 rounded-lg" style="background-color: #1a6ac3;" onmouseover="this.style.backgroundColor='#213874'" onmouseout="this.style.backgroundColor='#1a6ac3'">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Activity Card 4: Community Outreach -->
+                <div class="glass-effect rounded-xl shadow-lg overflow-hidden transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="h-48 bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center">
+                        <i class="fas fa-hands-helping text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6 bg-white bg-opacity-90">
+                        <h3 class="text-xl font-bold mb-3" style="color: #213874;">Community Outreach</h3>
+                        <p class="text-gray-700 mb-4">Join medical camps, health education programs, and community service projects that make a direct impact on public health.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-medium" style="background-color: #f3ab1b; color: #213874;">Medical Camp</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-medium" style="background-color: #1a6ac3; color: white;">Public Health</span>
+                        </div>
+                        <a href="#" class="text-white font-medium transition flex items-center px-4 py-2 rounded-lg" style="background-color: #1a6ac3;" onmouseover="this.style.backgroundColor='#213874'" onmouseout="this.style.backgroundColor='#1a6ac3'">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Activity Card 5: Professional Exchange -->
+                <div class="glass-effect rounded-xl shadow-lg overflow-hidden transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="h-48 bg-gradient-to-br from-teal-500 to-teal-700 flex items-center justify-center">
+                        <i class="fas fa-exchange-alt text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6 bg-white bg-opacity-90">
+                        <h3 class="text-xl font-bold mb-3" style="color: #213874;">Professional Exchange</h3>
+                        <p class="text-gray-700 mb-4">Experience international clinical rotations, research exchanges, and collaborative projects with medical students worldwide.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-medium" style="background-color: #f3ab1b; color: #213874;">Exchange</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-medium" style="background-color: #1a6ac3; color: white;">International</span>
+                        </div>
+                        <a href="#" class="text-white font-medium transition flex items-center px-4 py-2 rounded-lg" style="background-color: #1a6ac3;" onmouseover="this.style.backgroundColor='#213874'" onmouseout="this.style.backgroundColor='#1a6ac3'">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Activity Card 6: Leadership Development -->
+                <div class="glass-effect rounded-xl shadow-lg overflow-hidden transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="h-48 bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
+                        <i class="fas fa-users text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6 bg-white bg-opacity-90">
+                        <h3 class="text-xl font-bold mb-3" style="color: #213874;">Leadership Development</h3>
+                        <p class="text-gray-700 mb-4">Build leadership skills through governance roles, committee participation, and organizational management experiences.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-medium" style="background-color: #f3ab1b; color: #213874;">Leadership</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-medium" style="background-color: #1a6ac3; color: white;">Governance</span>
+                        </div>
+                        <a href="#" class="text-white font-medium transition flex items-center px-4 py-2 rounded-lg" style="background-color: #1a6ac3;" onmouseover="this.style.backgroundColor='#213874'" onmouseout="this.style.backgroundColor='#1a6ac3'">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Members Say Section -->
+            <div class="mt-20">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-white mb-4">What Our Members Say</h3>
+                    <div class="w-20 h-1 mx-auto" style="background-color: #f3ab1b;"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="glass-effect p-6 rounded-xl">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 text-lg">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-white mb-6 italic">"TAMSA's General Assembly transformed my perspective on global health. The networking opportunities and learning experiences are unmatched."</p>
+                        <div class="flex items-center">
+                            <img src="images/murtaza.jpeg" alt="Member" class="w-12 h-12 rounded-full mr-4 object-cover">
+                            <div>
+                                <h4 class="font-bold text-white">Dr. Sarah Kimani</h4>
+                                <p class="text-gray-200 text-sm">Medical Student, MUHAS</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="glass-effect p-6 rounded-xl">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 text-lg">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-white mb-6 italic">"The medical camp experience taught me the true meaning of community service. It's where theory meets practice in the most meaningful way."</p>
+                        <div class="flex items-center">
+                            <img src="images/chair.jpg" alt="Member" class="w-12 h-12 rounded-full mr-4 object-cover">
+                            <div>
+                                <h4 class="font-bold text-white">Michael Mwanza</h4>
+                                <p class="text-gray-200 text-sm">Medical Student, KCMUCO</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="glass-effect p-6 rounded-xl">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 text-lg">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <p class="text-white mb-6 italic">"Being part of TAMSA's leadership has equipped me with skills I never thought I'd develop during medical school. It's been life-changing."</p>
+                        <div class="flex items-center">
+                            <img src="images/vice.jpg" alt="Member" class="w-12 h-12 rounded-full mr-4 object-cover">
+                            <div>
+                                <h4 class="font-bold text-white">Grace Lutambi</h4>
+                                <p class="text-gray-200 text-sm">Medical Student, CUHAS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16" style="background: linear-gradient(135deg, #1a6ac3 0%, #213874 50%, #1a6ac3 100%); position: relative;">
+        <div class="absolute inset-0" style="background: rgba(0, 0, 0, 0.2);"></div>
+        <div class="content-wrapper container mx-auto px-4 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-white mb-4">Conference Impact</h2>
+                <div class="w-24 h-1 mx-auto mb-6" style="background-color: #f3ab1b;"></div>
+                <p class="text-xl text-white max-w-3xl mx-auto">Join thousands of medical students in making a lasting impact on global health</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="glass-effect p-8 rounded-xl" style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);">
+                    <div class="text-6xl font-bold mb-4" style="color: #f3ab1b;">500+</div>
+                    <div class="text-2xl text-white font-semibold mb-2">Expected Delegates</div>
+                    <div class="text-white opacity-90">From across Tanzania and Africa</div>
+                </div>
+                <div class="glass-effect p-8 rounded-xl" style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);">
+                    <div class="text-6xl font-bold mb-4" style="color: #f3ab1b;">15+</div>
+                    <div class="text-2xl text-white font-semibold mb-2">Medical Universities</div>
+                    <div class="text-white opacity-90">Participating institutions</div>
+                </div>
+                <div class="glass-effect p-8 rounded-xl" style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);">
+                    <div class="text-6xl font-bold mb-4" style="color: #f3ab1b;">4</div>
+                    <div class="text-2xl text-white font-semibold mb-2">Days of Excellence</div>
+                    <div class="text-white opacity-90">Packed with learning and networking</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<!-- Timeline Section -->
+<section class="py-16 timeline-bg parallax relative" style="background-image: linear-gradient(rgba(33, 56, 116, 0.8), rgba(26, 106, 195, 0.8)), url('images/mootcourt\ knockout.png'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <div class="bg-overlay"></div>
+    <div class="content-wrapper container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-white mb-4" style="color: #ffffff;">Conference Timeline</h2>
+            <div class="w-24 h-1 mx-auto mb-6" style="background-color: #f3ab1b;"></div>
+            <p class="text-xl text-white max-w-3xl mx-auto">Follow our comprehensive 6-day program from marathon to cultural celebration</p>
+        </div>
+        
+        <div class="relative">
+            <!-- Timeline line -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full" style="background-color: #f3ab1b;"></div>
+
+            <!-- Timeline items container -->
+            <div class="space-y-12">
+
+                <!-- Oct 4 - Marathon -->
+                <div class="relative flex items-center">
+                    <div class="flex-1 pr-8 text-right">
+                        <div class="glass-effect p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold text-white mb-2">Health & Wellness Marathon</h3>
+                            <p class="text-white mb-2" style="color: #f3ab1b;">October 4, 2025 (Saturday)</p>
+                            <p class="text-white mb-4">5KM, 10KM, 21KM races with NCD awareness and fitness fair</p>
+                            <div class="flex justify-end space-x-4">
+                                <span class="px-3 py-1 rounded-full text-sm font-medium" style="background-color: #f3ab1b; color: #213874;">Early Morning</span>
+                                <span class="px-3 py-1 rounded-full text-sm font-medium" style="background-color: #1a6ac3; color: white;">Fitness</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-12 h-12 rounded-full z-10 flex items-center justify-center" style="background-color: #f3ab1b;">
+                        <i class="fas fa-running text-2xl" style="color: #213874;"></i>
+                    </div>
+                    <div class="flex-1 pl-8">
+                        <div class="h-32"></div>
+                    </div>
+                </div>
+
+                <!-- Oct 5 - Medical Camp -->
+                <div class="relative flex items-center">
+                    <div class="flex-1 pr-8 text-right">
+                        <div class="h-32"></div>
+                    </div>
+                    <div class="w-12 h-12 rounded-full z-10 flex items-center justify-center" style="background-color: #f3ab1b;">
+                        <i class="fas fa-stethoscope text-2xl" style="color: #213874;"></i>
+                    </div>
+                    <div class="flex-1 pl-8">
+                        <div class="glass-effect p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold text-white mb-2">Medical Outreach Camp</h3>
+                            <p class="text-white mb-2" style="color: #f3ab1b;">October 5, 2025 (Sunday)</p>
+                            <p class="text-white mb-4">Free health services for 1000+ people at Mabwepande community</p>
+                            <div class="flex space-x-4">
+                                <span class="px-3 py-1 rounded-full text-sm font-medium" style="background-color: #f3ab1b; color: #213874;">All Day</span>
+                                <span class="px-3 py-1 rounded-full text-sm font-medium" style="background-color: #1a6ac3; color: white;">Community Service</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oct 6 - Scientific Conference -->
+                <div class="relative flex items-center">
+                    <div class="flex-1 pr-8 text-right">
+                        <div class="glass-effect p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold text-white mb-2">International Scientific Conference</h3>
+                            <p class="text-white mb-2" style="color: #f3ab1b;">October 6, 2025 (Monday)</p>
+                            <p class="text-white mb-4">Keynotes, research presentations, innovations and training sessions</p>
+                            <div class="flex justify-end space-x-4">
+                                <span class="px-3 py-1 rounded-full text-sm font-medium" style="background-color: #f3ab1b; color: #213874;">Full Day</span>
+                                <span class="px-3 py-1 rounded-full text-sm font-medium" style="background-color: #1a6ac3; color: white;">Academic</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-12 h-12 rounded-full z-10 flex items-center justify-center" style="background-color: #f3ab1b;">
+                        <i class="fas fa-microscope text-2xl" style="color: #213874;"></i>
+                    </div>
+                    <div class="flex-1 pl-8">
+                        <div class="h-32"></div>
+                    </div>
+                </div>
+
+                <!-- Oct 7 - General Assembly -->
+                <div class="relative flex items-center">
+                    <div class="flex-1 pr-8 text-right">
+                        <div class="h-32"></div>
+                    </div>
+                    <div class="w-12 h-12 rounded-full z-10 flex items-center justify-center" style="background-color: #f3ab1b;">
+                        <i class="fas fa-gavel text-2xl" style="color: #213874;"></i>
+                    </div>
+                    <div class="flex-1 pl-8">
+                        <div class="glass-effect p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold text-white mb-2">15th General Assembly</h3>
+                            <p class="text-white mb-2" style="color: #f3ab1b;">October 7, 2025 (Tuesday)</p>
+                            <p class="text-white mb-4">Constitution review, elections, strategic planning and governance</p>
+                            <div class="flex space-x-4">
+                                <span class="px-3 py-1 rounded-full text-sm font-medium" style="background-color: #f3ab1b; color: #213874;">Full Day</span>
+                                <span class="px-3 py-1 rounded-full text-sm font-medium" style="background-color: #1a6ac3; color: white;">Governance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oct 8 - Workshops & Training -->
+                <div class="relative flex items-center">
+                    <div class="flex-1 pr-8 text-right">
+                        <div class="glass-effect p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold text-white mb-2">Skills Development Day</h3>
+                            <p class="text-white mb-2" style="color: #f3ab1b;">October 8, 2025 (Wednesday)</p>
+                            <p class="text-white mb-4">Professional workshops, capacity building and networking sessions</p>
+                            <div class="flex justify-end space-x-4">
+                                <span class="px-3 py-1 rounded-full text-sm font-medium" style="background-color: #f3ab1b; color: #213874;">Full Day</span>
+                                <span class="px-3 py-1 rounded-full text-sm font-medium" style="background-color: #1a6ac3; color: white;">Training</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-12 h-12 rounded-full z-10 flex items-center justify-center" style="background-color: #f3ab1b;">
+                        <i class="fas fa-graduation-cap text-2xl" style="color: #213874;"></i>
+                    </div>
+                    <div class="flex-1 pl-8">
+                        <div class="h-32"></div>
+                    </div>
+                </div>
+
+                <!-- Oct 9 - Cultural Celebration -->
+                <div class="relative flex items-center">
+                    <div class="flex-1 pr-8 text-right">
+                        <div class="h-32"></div>
+                    </div>
+                    <div class="w-12 h-12 rounded-full z-10 flex items-center justify-center" style="background-color: #f3ab1b;">
+                        <i class="fas fa-umbrella-beach text-2xl" style="color: #213874;"></i>
+                    </div>
+                    <div class="flex-1 pl-8">
+                        <div class="glass-effect p-6 rounded-xl">
+                            <h3 class="text-2xl font-bold text-white mb-2">Mbudya Island Excursion</h3>
+                            <p class="text-white mb-2" style="color: #f3ab1b;">October 9, 2025 (Thursday)</p>
+                            <p class="text-white mb-4">Cultural celebration, team bonding and farewell activities</p>
+                            <div class="flex space-x-4">
+                                <span class="px-3 py-1 rounded-full text-sm font-medium" style="background-color: #f3ab1b; color: #213874;">All Day</span>
+                                <span class="px-3 py-1 rounded-full text-sm font-medium" style="background-color: #1a6ac3; color: white;">Cultural</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- CTA Section -->
+    <section class="py-20 cta-bg parallax relative">
+        <div class="bg-overlay"></div>
+        <div class="content-wrapper container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 fade-in">Ready to Get Involved?</h2>
+            <p class="text-xl text-white max-w-2xl mx-auto mb-8 fade-in delay-1">Join thousands of medical students worldwide in making a difference through TAMSA activities.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in delay-2">
+                <a href="#" class="glass bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300 inline-block">Join Now</a>
+                <a href="#" class="glass bg-transparent border-2 border-white px-8 py-3 rounded-full font-semibold text-white hover:bg-white hover:text-blue-600 transition duration-300 inline-block">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+  
+    <script>
+        // Simple scroll animation trigger
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeInOnScroll = function() {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementTop < windowHeight - 100) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Initial check
+            fadeInOnScroll();
+            
+            // Check on scroll
+            window.addEventListener('scroll', fadeInOnScroll);
+        });
+        
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('opacity-0');
+            mobileMenu.classList.toggle('-translate-y-4');
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const itemsPerPage = 6;
+            let currentPage = 1;
+            let filteredCards = Array.from(document.querySelectorAll('.activity-card'));
+            
+            // Filter by category
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    filteredCards = Array.from(document.querySelectorAll('.activity-card'))
+                        .filter(card => filterValue === 'all' || card.getAttribute('data-category') === filterValue);
+                    
+                    currentPage = 1;
+                    updateDisplay();
+                });
+            });
+            
+            // Search functionality
+            const searchInput = document.getElementById('activity-search');
+            const searchButton = document.getElementById('search-button');
+            
+            const performSearch = () => {
+                const searchTerm = searchInput.value.toLowerCase();
+                filteredCards = Array.from(document.querySelectorAll('.activity-card'))
+                    .filter(card => {
+                        const title = card.querySelector('h3').textContent.toLowerCase();
+                        const description = card.querySelector('p').textContent.toLowerCase();
+                        return title.includes(searchTerm) || description.includes(searchTerm);
+                    });
+                                
+                currentPage = 1;
+                updateDisplay();
+            };
+            
+            searchInput.addEventListener('input', performSearch);
+            searchButton.addEventListener('click', performSearch);
+            
+            // Pagination
+            const prevButton = document.getElementById('prev-page');
+            const nextButton = document.getElementById('next-page');
+            const pageNumbers = document.getElementById('page-numbers');
+            
+            function updateDisplay() {
+                const startIndex = (currentPage - 1) * itemsPerPage;
+                const endIndex = startIndex + itemsPerPage;
+                const paginatedCards = filteredCards.slice(startIndex, endIndex);
+                
+                // Hide all cards
+                document.querySelectorAll('.activity-card').forEach(card => {
+                    card.style.display = 'none';
+                });
+                
+                // Show only current page cards
+                paginatedCards.forEach(card => {
+                    card.style.display = 'block';
+                });
+                
+                // Update pagination buttons
+                prevButton.disabled = currentPage === 1;
+                nextButton.disabled = endIndex >= filteredCards.length;
+                
+                // Update page numbers
+                const totalPages = Math.ceil(filteredCards.length / itemsPerPage);
+                pageNumbers.innerHTML = '';
+                
+                for (let i = 1; i <= totalPages; i++) {
+                    const pageButton = document.createElement('button');
+                    pageButton.className = `px-4 py-2 border rounded-md ${currentPage === i ? 'bg-blue-600 text-white' : 'text-white border-white hover:bg-white hover:text-blue-600'}`;
+                    pageButton.textContent = i;
+                    pageButton.addEventListener('click', () => {
+                        currentPage = i;
+                        updateDisplay();
+                    });
+                    pageNumbers.appendChild(pageButton);
+                }
+            }
+            
+            prevButton.addEventListener('click', () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    updateDisplay();
+                }
+            });
+            
+            nextButton.addEventListener('click', () => {
+                if ((currentPage * itemsPerPage) < filteredCards.length) {
+                    currentPage++;
+                    updateDisplay();
+                }
+            });
+            
+            // Mobile menu toggle
+            const mobileMenuButton = document.querySelector('button.md\\:hidden');
+            mobileMenuButton.addEventListener('click', function() {
+                alert('Mobile menu would open here in a full implementation');
+            });
+            
+            // Initialize display
+            updateDisplay();
+        });
+    </script>
+    
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+    
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

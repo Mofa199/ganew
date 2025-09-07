@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Menu Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="header-container"></div>
+    
+    <div class="p-8">
+        <h1 class="text-2xl font-bold">Mobile Menu Test</h1>
+        <p>This page tests if the mobile menu is working correctly.</p>
+    </div>
+    
+    <div id="footer-container"></div>
+    
+    <script src="script.js"></script>
+    <script>
+        // Test script to verify mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                const toggle = document.getElementById('menu-toggle');
+                const menu = document.getElementById('mobile-menu');
+                const overlay = document.getElementById('mobile-overlay');
+                
+                console.log('Testing mobile menu elements:');
+                console.log('Toggle button:', toggle);
+                console.log('Mobile menu:', menu);
+                console.log('Overlay:', overlay);
+                
+                if (toggle && menu && overlay) {
+                    console.log('All mobile menu elements found!');
+                    
+                    // Add a test click handler
+                    toggle.addEventListener('click', function(e) {
+                        console.log('Mobile menu toggle clicked!');
+                        e.preventDefault();
+                        
+                        // Toggle menu visibility
+                        menu.classList.toggle('hidden');
+                        menu.classList.toggle('translate-x-full');
+                        overlay.classList.toggle('opacity-0');
+                        overlay.classList.toggle('pointer-events-none');
+                        
+                        console.log('Menu classes after toggle:', menu.className);
+                        console.log('Overlay classes after toggle:', overlay.className);
+                    });
+                } else {
+                    console.log('Some mobile menu elements are missing!');
+                }
+            }, 1500); // Wait for header to load
+        });
+    </script>
+</body>
+</html>

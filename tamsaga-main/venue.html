@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GA Venue - IFMSA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .map-container {
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .venue-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .gallery-image {
+            height: 200px;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Glass effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        
+        /* Hero video background */
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .video-container video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+        }
+        
+        /* Section backgrounds */
+        .venue-section {
+            background: linear-gradient(rgba(33, 56, 116, 0.8), rgba(33, 56, 116, 0.8)), 
+                        url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .gallery-section {
+            background: linear-gradient(rgba(26, 106, 195, 0.8), rgba(26, 106, 195, 0.8)), 
+                        url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .transport-section {
+            background: linear-gradient(rgba(33, 56, 116, 0.8), rgba(33, 56, 116, 0.8)), 
+                        url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .attractions-section {
+            background: linear-gradient(rgba(26, 106, 195, 0.8), rgba(26, 106, 195, 0.8)), 
+                        url('https://images.unsplash.com/photo-1499092346589-b9b6be3e94b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        @media (max-width: 768px) {
+            .image-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+            
+            .gallery-image {
+                height: 150px;
+            }
+            
+            .video-container {
+                height: 80vh;
+            }
+            
+            .venue-section,
+            .gallery-section,
+            .transport-section,
+            .attractions-section {
+                background-attachment: scroll;
+            }
+        }
+    </style>
+    <link rel="icon" type="image/png" href="images/wite bg.png">
+</head>
+<body class="bg-gray-50">
+    <!-- Header Container -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section with Video Background -->
+    <section class="relative text-white min-h-screen flex items-center overflow-hidden" style="background-color: #213874;">
+        <div class="video-container">
+            <iframe
+                src="https://www.youtube.com/embed/zu4YbFuqDbw?autoplay=1&mute=1&controls=0&loop=1&playlist=zu4YbFuqDbw"
+                title="APC Hotel"
+                frameborder="0"
+                allow="autoplay; fullscreen"
+                allowfullscreen
+                class="absolute inset-0 w-full h-full">
+            </iframe>
+            <div class="absolute inset-0" style="background: linear-gradient(rgba(33, 56, 116, 0.7), rgba(26, 106, 195, 0.5));"></div>
+        </div>
+        <div class="container mx-auto px-4 h-full flex items-center justify-center relative z-10 text-center">
+            <div class="glass p-8 md:p-12 max-w-4xl">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 text-shadow">General Assembly Venue</h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">Discover the location of this year's TAMSA GA and ISC</p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#venue" class="px-6 py-3 rounded-lg font-semibold transition transform hover:scale-105" style="background-color: #f3ab1b; color: #213874;">Venue Info</a>
+                    <a href="#transport" class="border-2 border-white px-6 py-3 rounded-lg font-semibold text-white hover:bg-white hover:text-[#213874] transition">Transportation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Venue Section -->
+        <section id="venue" class="venue-section py-16 px-4">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white mb-4">Conference Venue</h2>
+                    <div class="w-20 h-1 bg-white mx-auto"></div>
+                </div>
+                
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-2/3">
+                        <div class="glass rounded-xl overflow-hidden venue-card transition duration-300">
+                            <div class="map-container">
+                                <!-- Embedded Google Map -->
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1d63413.799541089815!2d39.04527002167969!3d-6.601797399999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185cf7d0e5274c25%3A0x61f7e3e45dd24c07!2sAPC%20Hotel%20and%20Conference%20Centre!5e0!3m2!1sen!2stz!4v1752535193206!5m2!1sen!2stz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+                                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                            <div class="p-6 bg-white/90">
+                                <h3 class="text-2xl font-bold text-[#213874] mb-2">APC Hotel and Conference Centre</h3>
+                                <p class="text-gray-600 mb-4"><i class="fas fa-map-marker-alt text-[#1a6ac3] mr-2"></i> Mbweni – Bunju area 1.5 km from Bagamoyo Road. The Hotel is 36 kilometres from Dar es salaam City Centre</p>
+                                <p class="text-gray-700 mb-4">The Perfect place to find relaxation and host our yearly GA and ISC</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-blue-100 text-[#1a6ac3] px-3 py-1 rounded-full text-sm"><i class="fas fa-wifi mr-1"></i> Free WiFi</span>
+                                    <span class="bg-blue-100 text-[#1a6ac3] px-3 py-1 rounded-full text-sm"><i class="fas fa-utensils mr-1"></i> Catering</span>
+                                    <span class="bg-blue-100 text-[#1a6ac3] px-3 py-1 rounded-full text-sm"><i class="fas fa-wheelchair mr-1"></i> Accessibility</span>
+                                    <span class="bg-blue-100 text-[#1a6ac3] px-3 py-1 rounded-full text-sm"><i class="fas fa-parking mr-1"></i> Parking</span>
+                                </div>
+                                <a href="https://apchotelandconferencecentre.co.tz/" class="text-[#1a6ac3] font-semibold hover:text-[#213874] transition flex items-center">
+                                    Visit official website <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-1/3">
+                        <div class="glass rounded-xl p-6 h-full venue-card transition duration-300 bg-white/90">
+                            <h3 class="text-xl font-bold text-[#213874] mb-4">Venue Highlights</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                        <i class="fas fa-users text-[#1a6ac3]"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Capacity</h4>
+                                        <p class="text-gray-600 text-sm">Main hall accommodates up to 2,000 participants</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                        <i class="fas fa-door-open text-[#1a6ac3]"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Meeting Rooms</h4>
+                                        <p class="text-gray-600 text-sm">15 breakout rooms of various sizes</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                        <i class="fas fa-language text-[#1a6ac3]"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Translation</h4>
+                                        <p class="text-gray-600 text-sm">Simultaneous translation in 6 languages</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                        <i class="fas fa-hotel text-[#1a6ac3]"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Accommodation</h4>
+                                        <p class="text-gray-600 text-sm">Special rates at nearby partner hotels</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section py-16 px-4">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-white mb-4">Venue Gallery</h2>
+                    <div class="w-20 h-1 bg-white mx-auto"></div>
+                </div>
+                
+                <div class="image-gallery">
+                    <div class="glass overflow-hidden rounded-lg">
+                        <img src="images/1st.jpg"
+                            alt="Conference Hall" class="gallery-image w-full">
+                    </div>
+                    <div class="glass overflow-hidden rounded-lg">
+                        <img src="images/2nd.jpg"
+                            alt="Lobby Area" class="gallery-image w-full">
+                    </div>
+                    <div class="glass overflow-hidden rounded-lg">
+                        <img src="images/3rd.jpg"
+                            alt="Meeting Room" class="gallery-image w-full">
+                    </div>
+                    <div class="glass overflow-hidden rounded-lg">
+                        <img src="images/4th.jpg"
+                            alt="Networking Space" class="gallery-image w-full">
+                    </div>
+                    <div class="glass overflow-hidden rounded-lg">
+                        <img src="images/5th.jpg"
+                            alt="Catering Area" class="gallery-image w-full">
+                    </div>
+                    <div class="glass overflow-hidden rounded-lg">
+                        <img src="images/6th.jpg"
+                            alt="Auditorium" class="gallery-image w-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conference Information Section -->
+        <section class="py-16 px-4" style="background: linear-gradient(rgba(33, 56, 116, 0.8), rgba(33, 56, 116, 0.8)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center;">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white mb-4">Conference Information</h2>
+                    <div class="w-20 h-1 bg-white mx-auto"></div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="glass rounded-xl p-6 bg-white/90">
+                        <h3 class="text-2xl font-bold text-[#213874] mb-4">17th International Scientific Conference</h3>
+                        <p class="text-gray-700 mb-4">Join us for cutting-edge presentations and discussions on the latest advancements in medical research and healthcare innovation.</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-[#1a6ac3] mb-2">Key Details:</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-calendar-alt text-[#f3ab1b] mt-1 mr-2"></i>
+                                    <span><strong>Dates:</strong> October 6-8, 2025</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-clock text-[#f3ab1b] mt-1 mr-2"></i>
+                                    <span><strong>Time:</strong> 8:00 AM - 6:00 PM Daily</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-map-marker-alt text-[#f3ab1b] mt-1 mr-2"></i>
+                                    <span><strong>Location:</strong> APC Hotel and Conference Centre</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <h4 class="font-semibold text-[#1a6ac3] mb-2">Conference Themes:</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-[#1a6ac3] px-3 py-1 rounded-full text-sm">Global Health</span>
+                                <span class="bg-blue-100 text-[#1a6ac3] px-3 py-1 rounded-full text-sm">Medical Education</span>
+                                <span class="bg-blue-100 text-[#1a6ac3] px-3 py-1 rounded-full text-sm">Health Technology</span>
+                                <span class="bg-blue-100 text-[#1a6ac3] px-3 py-1 rounded-full text-sm">Public Health</span>
+                                <span class="bg-blue-100 text-[#1a6ac3] px-3 py-1 rounded-full text-sm">Clinical Research</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass rounded-xl p-6 bg-white/90">
+                        <h3 class="text-2xl font-bold text-[#213874] mb-4">15th General Assembly</h3>
+                        <p class="text-gray-700 mb-4">Participate in TAMSA's democratic governance process, including elections, policy discussions, and strategic planning sessions.</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-[#1a6ac3] mb-2">Key Details:</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-calendar-alt text-[#f3ab1b] mt-1 mr-2"></i>
+                                    <span><strong>Dates:</strong> October 7-8, 2025</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-clock text-[#f3ab1b] mt-1 mr-2"></i>
+                                    <span><strong>Time:</strong> 9:00 AM - 5:00 PM</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-map-marker-alt text-[#f3ab1b] mt-1 mr-2"></i>
+                                    <span><strong>Location:</strong> APC Hotel and Conference Centre</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <h4 class="font-semibold text-[#1a6ac3] mb-2">Assembly Components:</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-vote-yea text-[#f3ab1b] mt-1 mr-2"></i>
+                                    <span>Presidential and Executive Elections</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-gavel text-[#f3ab1b] mt-1 mr-2"></i>
+                                    <span>Constitutional Amendments Review</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-users text-[#f3ab1b] mt-1 mr-2"></i>
+                                    <span>Standing Committee Sessions</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-graduation-cap text-[#f3ab1b] mt-1 mr-2"></i>
+                                    <span>Capacity Building Workshops</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <a href="schedule.html" class="inline-block px-8 py-3 rounded-md font-bold text-lg transition transform hover:scale-105" style="background-color: #f3ab1b; color: #213874;">
+                        View Full Schedule
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transportation Section -->
+        <section id="transport" class="transport-section py-16 px-4">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-white mb-4">Getting There</h2>
+                    <div class="w-20 h-1 bg-white mx-auto"></div>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="glass rounded-xl p-6 venue-card transition duration-300 bg-white/90">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-plane text-[#1a6ac3] text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-[#213874]">By Air</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">The nearest airport is Nyerere International Airport, approximately 25 km from the venue.</p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-[#1a6ac3] mt-1 mr-2 text-xs"></i>
+                                <span>Taxi / Bolt: ~45 min, 30,000/= TSHS</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-[#1a6ac3] mt-1 mr-2 text-xs"></i>
+                                <span>Public Transport: ~65 min, 5000/=</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="glass rounded-xl p-6 venue-card transition duration-300 bg-white/90">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-subway text-[#1a6ac3] text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-[#213874]">Public Transport</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">The venue is easily accessible via Dar es salaam Extensive public Transport Dart.</p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-[#1a6ac3] mt-1 mr-2 text-xs"></i>
+                                <span>DART (Mwendokasi) to Morroco</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-[#1a6ac3] mt-1 mr-2 text-xs"></i>
+                                <span>Public Bus: Bunju Sokoni (Stop: Bunju Kwa Mjeshi)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="glass rounded-xl p-6 venue-card transition duration-300 bg-white/90">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-car text-[#1a6ac3] text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-[#213874]">By Car</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">Limited parking is available at the venue and nearby parking garages.</p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-[#1a6ac3] mt-1 mr-2 text-xs"></i>
+                                <span>Venue parking: </span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-[#1a6ac3] mt-1 mr-2 text-xs"></i>
+                                <span>Nearby garages: AT YOUR OWN RISK</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nearby Attractions -->
+        <section class="attractions-section py-16 px-4">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-white mb-4">Nearby Attractions</h2>
+                    <div class="w-20 h-1 bg-white mx-auto"></div>
+                </div>
+                
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="glass rounded-xl overflow-hidden venue-card transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1496442226666-8d50d06b11df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                                alt="Times Square" class="w-full h-40 object-cover">
+                        <div class="p-4 bg-white/90">
+                            <h3 class="font-bold text-lg mb-2">Saadani</h3>
+                            <p class="text-gray-600 text-sm mb-3">0.8 miles from venue</p>
+                            <p class="text-gray-700 text-sm">One of the beautiful parks in Dar es salaam.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="glass rounded-xl overflow-hidden venue-card transition duration-300">
+                        <img src="images/daf1e6425152b2bc88fa28881139a6e5.jpeg"
+                                alt="Central Park" class="w-full h-40 object-cover">
+                        <div class="p-4 bg-white/90">
+                            <h3 class="font-bold text-lg mb-2">Ununio Beach</h3>
+                            <p class="text-gray-600 text-sm mb-3">1.5 miles from venue</p>
+                            <p class="text-gray-700 text-sm">A classic beach with hidden and amazing activities activities.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="glass rounded-xl overflow-hidden venue-card transition duration-300">
+                        <img src="images/R.jpeg"
+                                alt="Statue of Liberty" class="w-full h-40 object-cover">
+                        <div class="p-4 bg-white/90">
+                            <h3 class="font-bold text-lg mb-2">Wet & Wild</h3>
+                            <p class="text-gray-600 text-sm mb-3">6 miles from venue</p>
+                            <p class="text-gray-700 text-sm">A place to cool off after discussions. </p>
+                        </div>
+                    </div>
+                    
+                    <div class="glass rounded-xl overflow-hidden venue-card transition duration-300">
+                        <img src="images/serval10.jpg"
+                                alt="Museum of Modern Art" class="w-full h-40 object-cover">
+                        <div class="p-4 bg-white/90">
+                            <h3 class="font-bold text-lg mb-2">Mbweni JKT club Zoo</h3>
+                            <p class="text-gray-600 text-sm mb-3">0.7 miles from venue</p>
+                            <p class="text-gray-700 text-sm">Interact and get the experience of the wild with JKT Zoo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Simple JavaScript for mobile menu toggle (would be expanded in a real implementation)
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GA 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a6ac3',
+                        secondary: '#213874',
+                        accent: '#f59e0b',
+                        dark: '#1F2937',
+                    },
+                    backdropBlur: {
+                        xs: '2px',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Glass effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        
+        .glass-dark {
+            background: rgba(33, 56, 116, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        /* Video background container */
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .video-background video {
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Section backgrounds with overlay */
+        .section-bg {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .section-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+        
+        /* Custom animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Schedule timeline */
+        .schedule-item::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #1a6ac3;
+            border: 3px solid white;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .section-bg {
+                background-attachment: scroll;
+            }
+            
+            .glass {
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-white text-white">
+
+    <!-- Navigation -->
+    <nav class="glass sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="flex-shrink-0">
+                        <img src="images/Picture1.png" alt="GA Logo" class="h-10">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-white font-medium hover:text-blue-200 transition">Home</a>
+                    <a href="about.html" class="text-white font-medium hover:text-blue-200 transition">About</a>
+                    <a href="program.html" class="text-white font-medium hover:text-blue-200 transition">Program</a>
+                    <a href="speakers.html" class="text-white font-medium hover:text-blue-200 transition">Speakers</a>
+                    <a href="venue.html" class="text-white font-medium hover:text-blue-200 transition">Venue</a>
+                    <a href="https://tamsatanzania.org/eventsthe-17th-international-scientific-conference-15th-tamsa-general-assembly/application-form/" 
+                       class="bg-white text-primary px-4 py-2 rounded-md font-medium hover:bg-blue-100 transition">
+                        Register
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-toggle" class="text-white">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden flex-col space-y-4 px-4 pb-4 glass-dark absolute top-16 left-0 w-full transition-all duration-300 transform -translate-y-4 opacity-0">
+            <a href="index.html" class="text-white font-medium hover:text-blue-200 transition">Home</a>
+            <a href="#" class="text-white font-medium hover:text-blue-200 transition">About</a>
+            <a href="#" class="text-white font-medium hover:text-blue-200 transition">Program</a>
+            <a href="#" class="text-white font-medium hover:text-blue-200 transition">Speakers</a>
+            <a href="#" class="text-white font-medium hover:text-blue-200 transition">Venue</a>
+            <a href="https://tamsatanzania.org/eventsthe-17th-international-scientific-conference-15th-tamsa-general-assembly/application-form/" 
+               class="bg-white text-primary px-4 py-2 rounded-md font-medium hover:bg-blue-100 transition">
+                Register
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video Background -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="video-background">
+            <video autoplay muted loop playsinline>
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-audience-at-a-concert-looking-at-the-stage-22609-large.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="text-center px-4 z-10 max-w-4xl glass rounded-2xl p-12 backdrop-blur-sm">
+            <div class="inline-block bg-white/20 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">
+                November 15-17, 2025
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">TAMSA 15th GA & 17th ISC</h1>
+            <p class="text-xl md:text-2xl mb-8">Advancing Medical Science Through Innovation and Collaboration</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#tickets" class="bg-white hover:bg-gray-100 text-primary px-8 py-4 rounded-lg font-bold text-lg transition duration-300 flex items-center justify-center">
+                    <i class="fas fa-ticket-alt mr-2"></i> Register Now
+                </a>
+                <a href="#about" class="bg-transparent border-2 border-white hover:bg-white/20 text-white px-8 py-4 rounded-lg font-bold text-lg transition duration-300 flex items-center justify-center">
+                    <i class="fas fa-info-circle mr-2"></i> Learn More
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-0 right-0 flex justify-center animate-bounce">
+            <a href="#about" class="text-white text-2xl">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Event Info Bar -->
+    <div class="bg-secondary text-white py-4 glass-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
+                <div class="flex flex-col items-center justify-center p-3 glass rounded-lg">
+                    <i class="fas fa-calendar-day text-white text-2xl mb-2"></i>
+                    <div>
+                        <div class="font-bold">Nov 15-17, 2025</div>
+                        <div class="text-sm text-blue-100">3 Days</div>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center justify-center p-3 glass rounded-lg">
+                    <i class="fas fa-clock text-white text-2xl mb-2"></i>
+                    <div>
+                        <div class="font-bold">8:00 AM - 6:00 PM</div>
+                        <div class="text-sm text-blue-100">Daily</div>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center justify-center p-3 glass rounded-lg">
+                    <i class="fas fa-map-marker-alt text-white text-2xl mb-2"></i>
+                    <div>
+                        <div class="font-bold">MUHAS Campus</div>
+                        <div class="text-sm text-blue-100">Dar es Salaam, Tanzania</div>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center justify-center p-3 glass rounded-lg">
+                    <i class="fas fa-users text-white text-2xl mb-2"></i>
+                    <div>
+                        <div class="font-bold">500+ Attendees</div>
+                        <div class="text-sm text-blue-100">Expected</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Event -->
+    <section id="about" class="section-bg py-20" style="background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">About The Event</h2>
+                <div class="w-20 h-1 bg-white mx-auto mb-6"></div>
+                <p class="text-blue-100 max-w-3xl mx-auto text-lg">
+                    The 15th TAMSA General Assembly and 17th International Scientific Conference brings together medical students, professionals, and researchers from across Africa and beyond.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="relative rounded-xl overflow-hidden shadow-xl glass">
+                        <img src="https://images.unsplash.com/photo-1581093196278-c5f6aa6be3c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                             alt="Medical conference"
+                             class="w-full h-auto">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                            <div class="text-white">
+                                <h3 class="text-xl font-bold">Join Medical Professionals</h3>
+                                <p class="text-blue-100">Networking opportunities with healthcare leaders</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass rounded-xl p-8">
+                    <h3 class="text-2xl font-bold text-white mb-6">Why Attend TAMSA GA 2025?</h3>
+                    <p class="text-blue-100 mb-6">
+                        This year's conference focuses on the most pressing medical challenges and innovations in Africa, including infectious diseases, non-communicable diseases, medical education, and public health strategies. With over 50 sessions across 3 days, you'll gain insights that will transform your medical practice and research.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-white/20 p-2 rounded-full mr-4">
+                                <i class="fas fa-microscope text-white text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Cutting-Edge Research</h4>
+                                <p class="text-blue-100">Learn from leading researchers about the latest medical advancements.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-white/20 p-2 rounded-full mr-4">
+                                <i class="fas fa-network-wired text-white text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Professional Networking</h4>
+                                <p class="text-blue-100">Connect with medical leaders, researchers, and fellow students.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-white/20 p-2 rounded-full mr-4">
+                                <i class="fas fa-handshake text-white text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Collaboration Opportunities</h4>
+                                <p class="text-blue-100">Discover potential research collaborations and partnerships.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <a href="#tickets" class="inline-flex items-center bg-white hover:bg-blue-100 text-primary px-6 py-3 rounded-lg font-medium transition duration-300">
+                            Reserve Your Spot Now
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Stats -->
+    <section class="section-bg py-16" style="background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D3D&auto=format&fit=crop&w=2070&q=80')">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="glass p-6 rounded-xl">
+                    <div class="text-4xl font-bold text-white mb-2">50+</div>
+                    <div class="text-blue-100 font-medium">Scientific Sessions</div>
+                </div>
+                <div class="glass p-6 rounded-xl">
+                    <div class="text-4xl font-bold text-white mb-2">30+</div>
+                    <div class="text-blue-100 font-medium">Speakers</div>
+                </div>
+                <div class="glass p-6 rounded-xl">
+                    <div class="text-4xl font-bold text-white mb-2">500+</div>
+                    <div class="text-blue-100 font-medium">Attendees</div>
+                </div>
+                <div class="glass p-6 rounded-xl">
+                    <div class="text-4xl font-bold text-white mb-2">15+</div>
+                    <div class="text-blue-100 font-medium">Countries</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Speakers -->
+    <section id="speakers" class="section-bg py-20" style="background-image: url('https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Featured Speakers</h2>
+                <div class="w-20 h-1 bg-white mx-auto mb-6"></div>
+                <p class="text-blue-100 max-w-3xl mx-auto text-lg">
+                    Learn from the brightest minds and most innovative thinkers in medicine and public health today.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Speaker 1 -->
+                <div class="glass rounded-xl overflow-hidden transition duration-300 hover:shadow-xl hover:transform hover:-translate-y-1">
+                    <div class="relative">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Speaker" class="w-full h-72 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4">
+                            <h3 class="text-white text-xl font-bold">Prof. Amina Juma</h3>
+                            <p class="text-blue-100">Infectious Disease Specialist</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <div class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-blue-100">4.9/5</span>
+                        </div>
+                        <p class="text-blue-100 mb-4">Leading expert in tropical diseases with over 20 years of research experience in Africa.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-white hover:text-blue-200">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="text-white hover:text-blue-200">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="text-white hover:text-blue-200">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Speaker 2 -->
+                <div class="glass rounded-xl overflow-hidden transition duration-300 hover:shadow-xl hover:transform hover:-translate-y-1">
+                    <div class="relative">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Speaker" class="w-full h-72 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4">
+                            <h3 class="text-white text-xl font-bold">Dr. Kwame Osei</h3>
+                            <p class="text-blue-100">Public Health Expert</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <div class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-sm text-blue-100">4.7/5</span>
+                        </div>
+                        <p class="text-blue-100 mb-4">Public health pioneer and author of "Health Systems in Africa". Advisor to multiple governments.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-white hover:text-blue-200">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="text-white hover:text-blue-200">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="text-white hover:text-blue-200">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Speaker 3 -->
+                <div class="glass rounded-xl overflow-hidden transition duration-300 hover:shadow-xl hover:transform hover:-translate-y-1">
+                    <div class="relative">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Speaker" class="w-full h-72 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4">
+                            <h3 class="text-white text-xl font-bold">Dr. Fatima Nkosi</h3>
+                            <p class="text-blue-100">Medical Education Specialist</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <div class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm text-blue-100">5.0/5</span>
+                        </div>
+                        <p class="text-blue-100 mb-4">Leading researcher in medical education with breakthroughs in curriculum development for African contexts.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-white hover:text-blue-200">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="text-white hover:text-blue-200">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="text-white hover:text-blue-200">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center text-white hover:text-blue-200 font-medium">
+                    View All Speakers
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Schedule -->
+    <section id="schedule" class="section-bg py-20" style="background-image: url('https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2012&q=80')">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Event Schedule</h2>
+                <div class="w-20 h-1 bg-white mx-auto mb-6"></div>
+                <p class="text-blue-100 max-w-3xl mx-auto text-lg">
+                    Three days packed with insightful sessions, workshops, and networking opportunities.
+                </p>
+            </div>
+            
+            <div class="glass rounded-xl shadow-md overflow-hidden">
+                <!-- Schedule Tabs -->
+                <div class="border-b border-white/20">
+                    <nav class="flex -mb-px">
+                        <button class="schedule-tab active py-4 px-6 text-center border-b-2 font-medium text-sm border-white text-white">
+                            Day 1 <span class="block text-xs font-normal text-blue-100">Nov 15</span>
+                        </button>
+                        <button class="schedule-tab py-4 px-6 text-center border-b-2 font-medium text-sm border-transparent text-blue-200 hover:text-white hover:border-white/30">
+                            Day 2 <span class="block text-xs font-normal text-blue-100">Nov 16</span>
+                        </button>
+                        <button class="schedule-tab py-4 px-6 text-center border-b-2 font-medium text-sm border-transparent text-blue-200 hover:text-white hover:border-white/30">
+                            Day 3 <span class="block text-xs font-normal text-blue-100">Nov 17</span>
+                        </button>
+                    </nav>
+                </div>
+                
+                <!-- Schedule Content -->
+                <div class="p-6">
+                    <div class="schedule-content active">
+                        <!-- Day 1 Schedule -->
+                        <div class="space-y-8">
+                            <div class="relative pl-8">
+                                <div class="absolute left-0 top-0 w-0.5 h-full bg-white/20"></div>
+                                <div class="schedule-item relative pb-8">
+                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                                        <h3 class="text-lg font-bold text-white">Registration & Welcome Coffee</h3>
+                                        <div class="bg-white/20 text-white px-3 py-1 rounded-full text-sm font-medium inline-flex items-center">
+                                            <i class="fas fa-coffee mr-2"></i>
+                                            8:00 AM - 9:00 AM
+                                        </div>
+                                    </div>
+                                    <p class="text-blue-100">Main Hall</p>
+                                </div>
+                            </div>
+                                                        
+                            <div class="relative pl-8">
+                                <div class="absolute left-0 top-0 w-0.5 h-full bg-white/20"></div>
+                                <div class="schedule-item relative pb-8">
+                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                                        <h3 class="text-lg font-bold text-white">Opening Keynote: Healthcare in Africa</h3>
+                                        <div class="bg-white/20 text-white px-3 py-1 rounded-full text-sm font-medium inline-flex items-center">
+                                            <i class="fas fa-microphone mr-2"></i>
+                                            9:00 AM - 10:30 AM
+                                        </div>
+                                    </div>
+                                    <p class="text-blue-100 mb-3">Prof. Amina Juma, Infectious Disease Specialist</p>
+                                    <p class="text-blue-100">Main Hall</p>
+                                </div>
+                            </div>
+                                                        
+                            <div class="relative pl-8">
+                                <div class="absolute left-0 top-0 w-0.5 h-full bg-white/20"></div>
+                                <div class="schedule-item relative pb-8">
+                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                                        <h3 class="text-lg font-bold text-white">Networking Break</h3>
+                                        <div class="bg-white/20 text-white px-3 py-1 rounded-full text-sm font-medium inline-flex items-center">
+                                            <i class="fas fa-utensils mr-2"></i>
+                                            10:30 AM - 11:00 AM
+                                        </div>
+                                    </div>
+                                    <p class="text-blue-100">Exhibition Area</p>
+                                </div>
+                            </div>
+                                                        
+                            <div class="relative pl-8">
+                                <div class="absolute left-0 top-0 w-0.5 h-full bg-white/20"></div>
+                                <div class="schedule-item relative">
+                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                                        <h3 class="text-lg font-bold text-white">Public Health Panel</h3>
+                                        <div class="bg-white/20 text-white px-3 py-1 rounded-full text-sm font-medium inline-flex items-center">
+                                            <i class="fas fa-users mr-2"></i>
+                                            11:00 AM - 12:30 PM
+                                        </div>
+                                    </div>
+                                    <p class="text-blue-100 mb-3">Moderated by Dr. Kwame Osei with health experts</p>
+                                    <p class="text-blue-100">Room A</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                        
+                    <div class="schedule-content hidden">
+                        <!-- Day 2 content would go here -->
+                        <p class="text-center py-8 text-blue-100">Day 2 schedule will be announced soon</p>
+                    </div>
+                                        
+                    <div class="schedule-content hidden">
+                        <!-- Day 3 content would go here -->
+                        <p class="text-center py-8 text-blue-100">Day 3 schedule will be announced soon</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="https://drive.google.com/file/d/1YourFullScheduleFileID/view?usp=sharing" target="_blank" class="inline-flex items-center bg-white hover:bg-blue-100 text-primary px-6 py-3 rounded-lg font-medium transition duration-300">
+                    <i class="fas fa-download mr-2"></i> Download Full Schedule
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venue Section -->
+    <section id="venue" class="section-bg py-20" style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Event Venue</h2>
+                <div class="w-20 h-1 bg-white mx-auto mb-6"></div>
+                <p class="text-blue-100 max-w-3xl mx-auto text-lg">
+                    Our prestigious venue provides the perfect setting for learning and networking.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="glass rounded-xl p-8">
+                    <h3 class="text-2xl font-bold text-white mb-4">MUHAS Campus</h3>
+                    <p class="text-blue-100 mb-6">
+                        Located in the heart of Dar es Salaam, our venue offers easy access to transportation, hotels, and local attractions. The university campus features modern facilities, spacious conference rooms, and excellent catering services.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-white mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-bold text-white">Address</h4>
+                                <p class="text-blue-100">United Nations Road, Upanga, Ilala, Dar es Salaam, Tanzania</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-subway text-white mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-bold text-white">Public Transport</h5>
+                                <p class="text-blue-100">5 min walk from Ubungo Bus Terminal</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-parking text-white mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-bold text-white">Parking</h4>
+                                <p class="text-blue-100">Ample parking available on campus</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="inline-flex items-center text-white hover:text-blue-200 font-medium">
+                        <i class="fas fa-directions mr-2"></i> Get Directions
+                    </a>
+                </div>
+                <div>
+                    <div class="glass overflow-hidden rounded-xl shadow-xl h-96">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.042888370028!2d39.20853831528697!3d-6.79646779503962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4f0e5c5f5e5f%3A0xf8a7e6e1e5f8e6e1!2sMuhimbili%20University%20of%20Health%20and%20Allied%20Sciences!5e0!3m2!1sen!2stz!4v1620000000000!5m2!1sen!2stz" 
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nearby Hotels -->
+    <section class="section-bg py-16" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h3 class="text-2xl font-bold text-white mb-8 text-center">Recommended Hotels</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass p-6 rounded-xl">
+                    <h4 class="font-bold text-lg text-white mb-2">Serena Hotel</h4>
+                    <p class="text-blue-100 text-sm mb-3">3.5 km from venue</p>
+                    <div class="text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-blue-100 mb-4">Special rates for conference attendees available.</p>
+                    <a href="#" class="text-white hover:text-blue-200 text-sm font-medium">Book Now →</a>
+                </div>
+                <div class="glass p-6 rounded-xl">
+                    <h4 class="font-bold text-lg text-white mb-2">Hyatt Regency</h4>
+                    <p class="text-blue-100 text-sm mb-3">4.2 km from venue</p>
+                    <div class="text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-blue-100 mb-4">Modern rooms with panoramic city views.</p>
+                    <a href="#" class="text-white hover:text-blue-200 text-sm font-medium">Book Now →</a>
+                </div>
+                <div class="glass p-6 rounded-xl">
+                    <h4 class="font-bold text-lg text-white mb-2">Sea Cliff Hotel</h4>
+                    <p class="text-blue-100 text-sm mb-3">5.1 km from venue</p>
+                    <div class="text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-blue-100 mb-4">Luxury beachfront hotel with ocean views.</p>
+                    <a href="#" class="text-white hover:text-blue-200 text-sm font-medium">Book Now →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tickets -->
+    <section id="tickets" class="section-bg py-20" style="background-image: url('https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Get Your Tickets</h2>
+                <div class="w-20 h-1 bg-white mx-auto mb-6"></div>
+                <p class="text-blue-100 max-w-3xl mx-auto text-lg">
+                    Choose the ticket option that best fits your needs. Early bird discounts available until October 15.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Student Ticket -->
+                <div class="glass rounded-xl overflow-hidden shadow-xl hover:transform hover:-translate-y-2 transition duration-300">
+                    <div class="bg-white/20 text-center py-6 px-4">
+                        <h3 class="text-xl font-bold text-white">Student Pass</h3>
+                        <div class="text-4xl font-bold text-white my-4">$99</div>
+                        <div class="text-blue-100">Early Bird: $79 until Oct 15</div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-white mr-2"></i>
+                                <span class="text-blue-100">Access to all sessions</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-white mr-2"></i>
+                                <span class="text-blue-100">Conference materials</span>
+                            </li>
+                            <li class="flex items-center text-blue-200">
+                                <i class="fas fa-times text-blue-200 mr-2"></i>
+                                <span class="text-blue-200">Workshop access</span>
+                            </li>
+                            <li class="flex items-center text-blue-200">
+                                <i class="fas fa-times text-blue-200 mr-2"></i>
+                                <span class="text-blue-200">Lunch included</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-white hover:bg-blue-100 text-primary py-3 rounded-lg font-medium transition duration-300">
+                            Get Tickets
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Professional Ticket (Featured) -->
+                <div class="glass rounded-xl overflow-hidden shadow-xl border-2 border-white transform scale-105 relative hover:-translate-y-2 transition duration-300">
+                    <div class="absolute top-0 right-0 bg-white text-primary px-4 py-1 text-sm font-bold rounded-bl-lg">
+                        POPULAR
+                    </div>
+                    <div class="bg-white text-primary text-center py-6 px-4">
+                        <h3 class="text-xl font-bold">Professional Pass</h3>
+                        <div class="text-4xl font-bold text-primary my-4">$299</div>
+                        <div class="text-secondary">Early Bird: $249 until Oct 15</div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                <span>All Student Pass benefits</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                <span>Access to 2 workshops</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary mr-2"></i>
+                                <span>Lunch included all days</span>
+                            </li>
+                            <li class="flex items-center text-gray-400">
+                                <i class="fas fa-times text-gray-400 mr-2"></i>
+                                <span>VIP dinner</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-primary hover:bg-blue-800 text-white py-3 rounded-lg font-medium transition duration-300">
+                            Get Tickets
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- VIP Ticket -->
+                <div class="glass rounded-xl overflow-hidden shadow-xl hover:transform hover:-translate-y-2 transition duration-300">
+                    <div class="bg-secondary text-center py-6 px-4">
+                        <h3 class="text-xl font-bold text-white">VIP Pass</h3>
+                        <div class="text-4xl font-bold text-white my-4">$499</div>
+                        <div class="text-blue-100">Early Bird: $399 until Oct 15</div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-white mr-2"></i>
+                                <span class="text-blue-100">All Professional Pass benefits</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-white mr-2"></i>
+                                <span class="text-blue-100">Access to all workshops</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-white mr-2"></i>
+                                <span class="text-blue-100">VIP networking event</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-white mr-2"></i>
+                                <span class="text-blue-100">Exclusive dinner with speakers</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-white hover:bg-blue-100 text-primary py-3 rounded-lg font-medium transition duration-300">
+                            Get Tickets
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 glass rounded-xl p-6 text-center">
+                <h3 class="text-xl font-bold text-white mb-3">Group Discounts Available</h3>
+                <p class="text-blue-100 mb-4">Save 15% when you purchase 5 or more tickets together.</p>
+                <a href="#" class="inline-flex items-center text-white hover:text-blue-200 font-medium">
+                    <i class="fas fa-users mr-2"></i> Contact Us for Group Rates
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors -->
+    <section class="section-bg py-16" style="background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80')">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <h3 class="text-2xl font-bold text-white mb-4">Our Sponsors & Partners</h3>
+                <p class="text-blue-100 max-w-3xl mx-auto">We're proud to partner with organizations who share our vision for medical advancement in Africa.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+                <div class="flex justify-center p-4 glass rounded-lg">
+                    <img src="https://via.placeholder.com/180x80?text=WHO" alt="Sponsor" class="h-12 object-contain opacity-90 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="flex justify-center p-4 glass rounded-lg">
+                    <img src="https://via.placeholder.com/180x80?text=MUHAS" alt="Sponsor" class="h-12 object-contain opacity-90 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="flex justify-center p-4 glass rounded-lg">
+                    <img src="https://via.placeholder.com/180x80?text=IFMSA" alt="Sponsor" class="h-12 object-contain opacity-90 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="flex justify-center p-4 glass rounded-lg">
+                    <img src="https://via.placeholder.com/180x80?text=Ministry+of+Health" alt="Sponsor" class="h-12 object-contain opacity-90 hover:opacity-100 transition duration-300">
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center text-white hover:text-blue-200 font-medium glass px-6 py-3 rounded-lg">
+                    <i class="fas fa-handshake mr-2"></i> Become a Sponsor
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-r from-primary to-secondary">
+        <div class="max-w-4xl mx-auto px-4 text-center glass rounded-2xl p-12">
+            <h2 class="text-3xl font-bold mb-6">Ready to Join TAMSA GA 2025?</h2>
+            <p class="text-xl mb-8 text-blue-100">Limited tickets available. Secure your spot today before prices increase!</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#tickets" class="bg-white hover:bg-blue-100 text-primary px-8 py-4 rounded-lg font-bold text-lg transition duration-300">
+                    Get Your Ticket Now
+                </a>
+                <a href="#" class="bg-transparent hover:bg-white/20 border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg transition duration-300">
+                    Contact Our Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <img src="images/Picture1.png" alt="GA Logo" class="h-12 mb-4">
+                    <p class="text-blue-100">
+                        TAMSA is a member of the International Federation for Medical Students' Associations (IFMSA), which is one of the world's oldest and largest student-run organizations recognized by the World Health Organization as an official international forum for Medical Students.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-blue-100 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-blue-100 hover:text-white transition">About</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-white transition">Program</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-white transition">Speakers</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-white transition">Venue</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-blue-100">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-white"></i>
+                            <span>Muhimbili University of Health & Allied Sciences (MUHAS), United Nations Road, Upanga, Ilala Tanzania.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-white"></i>
+                            <span>scopi@tamsatanzania.org</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3 text-white"></i>
+                            <span>+255 768 924 035</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-blue-100 hover:text-white transition"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-blue-100 hover:text-white transition"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="https://www.instagram.com/tamsatanzania?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-blue-100 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-blue-100 hover:text-white transition"><i class="fab fa-linkedin-in text-xl"></i></a>
+                        <a href="#" class="text-blue-100 hover:text-white transition"><i class="fab fa-youtube text-xl"></i></a>
+                    </div>
+                    <div class="mt-6">
+                        <h4 class="font-medium text-white mb-2">Subscribe to Newsletter</h4>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-md text-gray-900 w-full">
+                            <button class="bg-primary px-4 py-2 rounded-r-md hover:bg-blue-800 transition text-white">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/20 mt-12 pt-8 text-center text-blue-100">
+                <p>&copy; 2025 TAMSA 15th GA and 17th ISC. All rights reserved. | Developed by MOFAS</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+            menu.classList.toggle('opacity-0');
+            menu.classList.toggle('opacity-100');
+            menu.classList.toggle('-translate-y-4');
+            menu.classList.toggle('translate-y-0');
+        });
+        
+        // Schedule tabs
+        const scheduleTabs = document.querySelectorAll('.schedule-tab');
+        const scheduleContents = document.querySelectorAll('.schedule-content');
+        
+        scheduleTabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and contents
+                scheduleTabs.forEach(t => t.classList.remove('active', 'border-white', 'text-white'));
+                scheduleTabs.forEach(t => t.classList.add('border-transparent', 'text-blue-200'));
+                scheduleContents.forEach(c => c.classList.add('hidden'));
+                scheduleContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding content
+                tab.classList.add('active', 'border-white', 'text-white');
+                tab.classList.remove('border-transparent', 'text-blue-200');
+                scheduleContents[index].classList.remove('hidden');
+                scheduleContents[index].classList.add('active');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Animation for schedule items
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.schedule-item').forEach(item => {
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!-- Navigation -->
+<nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <!-- Left Logo -->
+            <div class="flex items-center">
+                <a href="index.html" class="flex-shrink-0">
+                    <img src="images/wite bg.png" alt="TAMSA Logo" class="h-12 w-12 rounded-full border-2" style="border-color: #213874;">
+                </a>
+            </div>
+            
+            <!-- Center Navigation (Desktop) -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="font-medium transition" style="color: #213874;" onmouseover="this.style.color='#1a6ac3'" onmouseout="this.style.color='#213874'">Home</a>
+                <a href="about.html" class="font-medium transition" style="color: #213874;" onmouseover="this.style.color='#1a6ac3'" onmouseout="this.style.color='#213874'">About</a>
+                <a href="program.html" class="font-medium transition" style="color: #213874;" onmouseover="this.style.color='#1a6ac3'" onmouseout="this.style.color='#213874'">Program</a>
+                <a href="speakers.html" class="font-medium transition" style="color: #213874;" onmouseover="this.style.color='#1a6ac3'" onmouseout="this.style.color='#213874'">Speakers</a>
+                <a href="venue.html" class="font-medium transition" style="color: #213874;" onmouseover="this.style.color='#1a6ac3'" onmouseout="this.style.color='#213874'">Venue</a>
+                <a href="https://tamsatanzania.org/eventsthe-17th-international-scientific-conference-15th-tamsa-general-assembly/application-form/" class="text-white px-4 py-2 rounded-md font-medium transition" style="background-color: #1a6ac3;" onmouseover="this.style.backgroundColor='#213874'" onmouseout="this.style.backgroundColor='#1a6ac3'">Register</a>
+            </div>
+            
+            <!-- Right Logo -->
+            <div class="hidden md:flex items-center">
+                <a href="index.html" class="flex-shrink-0">
+                    <img src="images/Picture1.png" alt="GA Logo" class="h-12">
+                </a>
+            </div>
+            
+            <!-- Mobile: Two Logos + Menu Button -->
+            <div class="md:hidden flex items-center space-x-4">
+                <img src="images/Picture1.png" alt="GA Logo" class="h-10">
+                <button id="menu-toggle" style="color: #213874;">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-overlay" class="md:hidden fixed inset-0 bg-black bg-opacity-50 z-[60] opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out"></div>
+    
+    <!-- Mobile Sidebar Menu -->
+    <div id="mobile-menu" class="md:hidden hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-[70]">
+        <div class="flex flex-col p-6 mt-16">
+            <a href="index.html" class="font-medium transition py-3 border-b border-gray-200" style="color: #213874;" onmouseover="this.style.color='#1a6ac3'" onmouseout="this.style.color='#213874'">Home</a>
+            <a href="about.html" class="font-medium transition py-3 border-b border-gray-200" style="color: #213874;" onmouseover="this.style.color='#1a6ac3'" onmouseout="this.style.color='#213874'">About</a>
+            <a href="program.html" class="font-medium transition py-3 border-b border-gray-200" style="color: #213874;" onmouseover="this.style.color='#1a6ac3'" onmouseout="this.style.color='#213874'">Program</a>
+            <a href="speakers.html" class="font-medium transition py-3 border-b border-gray-200" style="color: #213874;" onmouseover="this.style.color='#1a6ac3'" onmouseout="this.style.color='#213874'">Speakers</a>
+            <a href="venue.html" class="font-medium transition py-3 border-b border-gray-200" style="color: #213874;" onmouseover="this.style.color='#1a6ac3'" onmouseout="this.style.color='#213874'">Venue</a>
+            <a href="https://tamsatanzania.org/eventsthe-17th-international-scientific-conference-15th-tamsa-general-assembly/application-form/" class="text-white px-4 py-3 rounded-md font-medium transition text-center mt-4" style="background-color: #1a6ac3;" onmouseover="this.style.backgroundColor='#213874'" onmouseout="this.style.backgroundColor='#1a6ac3'">Register</a>
+        </div>
+    </div>
+</nav>

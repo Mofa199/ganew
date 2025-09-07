@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/wite bg.png">
+</head>
+<body class="font-sans">
+    <!-- Header Container -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section with Video Background -->
+    <section class="relative text-white min-h-screen flex items-center overflow-hidden" style="background-color: #213874;">
+        <iframe
+            src="https://www.youtube.com/embed/6pOSstyeZdw?autoplay=1&mute=1&controls=0&loop=1&playlist=6pOSstyeZdw"
+            title="TAMSA About"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen
+            class="absolute inset-0 w-full h-full">
+        </iframe>
+        <div class="absolute inset-0" style="background: linear-gradient(rgba(33, 56, 116, 0.7), rgba(26, 106, 195, 0.5));"></div>
+        <div class="container mx-auto px-6 text-center glass-effect p-12 max-w-4xl relative z-10">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white text-shadow">About The Conference</h1>
+            <p class="text-xl md:text-2xl mb-8 text-white opacity-90">Connecting minds, creating the future</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#committee" class="px-6 py-3 rounded-full font-medium transition transform hover:scale-105" style="background-color: #f3ab1b; color: #213874;">Meet the Committee</a>
+                <a href="#message" class="border-2 border-white px-6 py-3 rounded-full font-medium text-white hover:bg-white hover:text-[#213874] transition">Chairperson's Message</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chairperson's Message -->
+    <div id="message" class="section-with-bg py-16" style="background-image: url('images/mootcourt\ knockout.png');">
+        <div class="container mx-auto px-6 section-content">
+            <div class="max-w-5xl mx-auto glass-card rounded-xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/3 bg-[#1a6ac3] flex items-center justify-center p-8">
+                        <img src="images/chair.jpg" alt="Chairperson" class="rounded-full border-4 border-white w-48 h-48 object-cover">
+                    </div>
+                    <div class="md:w-2/3 p-8">
+                        <h2 class="text-3xl font-bold text-[#213874] mb-4">Message from the Chairperson</h2>
+                        <div class="border-l-4 border-[#1a6ac3] pl-4 mb-6">
+                            <p class="text-gray-700 italic mb-4">"It is with great pleasure that I welcome you to our annual General Assembly and International Scientific conference."</p>
+                        </div>
+                        <p class="text-gray-600 mb-4">Dear Delegates, Esteemed Stakeholders, Partners, and Friends,</p>
+                        <p class="text-gray-600 mb-4">With immense joy and overwhelming anticipation, we, the Tanzania Medical Students’ Association (TAMSA), extend our warmest invitation to each of you to join us in the vibrant city of Dar es Salaam, the heart of the Swahili coast, for the 17th International Scientific Conference & 15th General Assembly—a celebration of innovation, leadership, and transformative action in health.</p>
+                        <p class="text-gray-600 mb-4">From October 4th to 9th, 2025, Tanzania will become a hub of energy and ideas, uniting hundreds of medical students, healthcare experts, institutions, and stakeholders.</p>
+                        <p class="text-gray-600 mb-4">We are standing at the brink of a new era in healthcare—where innovation meets compassion, and artificial intelligence walks hand in hand with human touch. This year’s conference is more than an event—it’s a movement. A convergence of minds from across Tanzania, Africa, and beyond. A fertile ground for knowledge exchange, policy dialogue, research presentations, and collaborative action that will ripple across communities and institutions alike.</p>
+                        <p class="text-gray-600">We can’t wait to welcome you to Dar es Salaam—where ideas will soar, collaborations will blossom, and lifelong memories will be made.</p>
+                        <p class="text-gray-700 font-medium mt-6">Suleiman Ngede<br>Chairperson, GA Organizing Committee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Committee Section -->
+    <div id="committee" class="section-with-bg py-16" style="background-image: url('images/mootcourt\ knockout.png');">
+        <div class="container mx-auto px-6 section-content">
+            <div class="about-title">Team</div>
+            
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <!-- Committee Member Cards -->
+                    <div class="card" data-member="0">
+                        <img src="images/vice.jpg" alt="Charles Nkuba">
+                    </div>
+                    <div class="card" data-member="1">
+                        <img src="images/Invitation.png" alt="Innocent Sambua">
+                    </div>
+                    <div class="card" data-member="2">
+                        <img src="images/dina.png" alt="Dina Ngiga">
+                    </div>
+                    <div class="card" data-member="3">
+                        <img src="images/justice.png" alt="Justice Mwangi">
+                    </div>
+                    <div class="card" data-member="4">
+                        <img src="images/IMG_1871.jpeg" alt="Mohamed Faisal">
+                    </div>
+                    <div class="card" data-member="5">
+                        <img src="images/mootcourt knockout.png" alt="Angel Kimario">
+                    </div>
+                </div>
+                
+                <!-- Navigation Arrows -->
+                <button class="nav-arrow left">‹</button>
+                <button class="nav-arrow right">›</button>
+            </div>
+            
+            <!-- Member Information -->
+            <div class="member-info">
+                <div class="member-name">Charles Nkuba</div>
+                <div class="member-role">Assistant Chairperson</div>
+            </div>
+            
+            <!-- Dots Navigation -->
+            <div class="dots">
+                <div class="dot active" data-index="0"></div>
+                <div class="dot" data-index="1"></div>
+                <div class="dot" data-index="2"></div>
+                <div class="dot" data-index="3"></div>
+                <div class="dot" data-index="4"></div>
+                <div class="dot" data-index="5"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        
+        .about-title {
+            font-size: 7.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            position: absolute;
+            top: 45px;
+            left: 50%;
+            transform: translateX(-50%);
+            pointer-events: none;
+            white-space: nowrap;
+            font-family: "Arial Black", "Arial Bold", Arial, sans-serif;
+            background: linear-gradient(
+                to bottom,
+                rgb(8 42 123 / 35%) 30%,
+                rgb(255 255 255 / 0%) 76%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .carousel-container {
+            width: 100%;
+            max-width: 1200px;
+            height: 450px;
+            position: relative;
+            perspective: 1000px;
+            margin: 80px auto 0;
+        }
+        
+        .carousel-track {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .card {
+            position: absolute;
+            width: 280px;
+            height: 380px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            cursor: pointer;
+        }
+        
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .card.center {
+            z-index: 10;
+            transform: scale(1.1) translateZ(0);
+        }
+        
+        .card.center img {
+            filter: none;
+        }
+        
+        .card.left-2 {
+            z-index: 1;
+            transform: translateX(-400px) scale(0.8) translateZ(-300px);
+            opacity: 0.7;
+        }
+        
+        .card.left-2 img {
+            filter: grayscale(100%);
+        }
+        
+        .card.left-1 {
+            z-index: 5;
+            transform: translateX(-200px) scale(0.9) translateZ(-100px);
+            opacity: 0.9;
+        }
+        
+        .card.left-1 img {
+            filter: grayscale(100%);
+        }
+        
+        .card.right-1 {
+            z-index: 5;
+            transform: translateX(200px) scale(0.9) translateZ(-100px);
+            opacity: 0.9;
+        }
+        
+        .card.right-1 img {
+            filter: grayscale(100%);
+        }
+        
+        .card.right-2 {
+            z-index: 1;
+            transform: translateX(400px) scale(0.8) translateZ(-300px);
+            opacity: 0.7;
+        }
+        
+        .card.right-2 img {
+            filter: grayscale(100%);
+        }
+        
+        .card.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .member-info {
+            text-align: center;
+            margin-top: 40px;
+            transition: all 0.5s ease-out;
+        }
+        
+        .member-name {
+            color: rgb(8, 42, 123);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .member-name::before,
+        .member-name::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            width: 100px;
+            height: 2px;
+            background: rgb(8, 42, 123);
+        }
+        
+        .member-name::before {
+            left: -120px;
+        }
+        
+        .member-name::after {
+            right: -120px;
+        }
+        
+        .member-role {
+            color: #848696;
+            font-size: 1.5rem;
+            font-weight: 500;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 10px 0;
+            margin-top: -15px;
+            position: relative;
+        }
+        
+        .dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 60px;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(8, 42, 123, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .dot.active {
+            background: rgb(8, 42, 123);
+            transform: scale(1.2);
+        }
+        
+        .nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(8, 42, 123, 0.6);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 20;
+            transition: all 0.3s ease;
+            font-size: 1.5rem;
+            border: none;
+            outline: none;
+            padding-bottom: 4px;
+        }
+        
+        .nav-arrow:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .nav-arrow.left {
+            left: 20px;
+            padding-right: 3px;
+        }
+        
+        .nav-arrow.right {
+            right: 20px;
+            padding-left: 3px;
+        }
+        
+        @media (max-width: 768px) {
+            .about-title {
+                font-size: 4.5rem;
+            }
+            .card {
+                width: 200px;
+                height: 280px;
+            }
+            .card.left-2 {
+                transform: translateX(-250px) scale(0.8) translateZ(-300px);
+            }
+            .card.left-1 {
+                transform: translateX(-120px) scale(0.9) translateZ(-100px);
+            }
+            .card.right-1 {
+                transform: translateX(120px) scale(0.9) translateZ(-100px);
+            }
+            .card.right-2 {
+                transform: translateX(250px) scale(0.8) translateZ(-300px);
+            }
+            .member-name {
+                font-size: 2rem;
+            }
+            .member-role {
+                font-size: 1.2rem;
+            }
+            .member-name::before,
+            .member-name::after {
+                width: 50px;
+            }
+            .member-name::before {
+                left: -70px;
+            }
+            .member-name::after {
+                right: -70px;
+            }
+        }
+    </style>
+
+    <!-- Resources Section -->
+    <div class="section-with-bg py-16" style="background-image: url('images/mootcourt\ knockout.png');">
+        <div class="container mx-auto px-6 section-content">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Conference Resources</h2>
+            
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Invitation Package -->
+                <div class="glass-card rounded-xl shadow-md overflow-hidden">
+                    <div class="h-48 bg-[#1a6ac3] flex items-center justify-center">
+                        <i class="fas fa-file-pdf text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Invitation Package</h3>
+                        <p class="text-gray-600 mb-4">Download our complete invitation package containing all the details about the conference, including schedule, venue information, and registration details.</p>
+                        <a href="https://drive.google.com/file/d/1YourInvitationPackageFileID/view?usp=sharing" target="_blank" class="download-btn bg-[#1a6ac3] hover:bg-[#213874] text-white px-6 py-3 rounded-full font-medium transition flex items-center inline-flex">
+                            <span class="mr-2">Download</span>
+                            <span class="download-icon"><i class="fas fa-download"></i></span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Survival Kits -->
+                <div class="glass-card rounded-xl shadow-md overflow-hidden">
+                    <div class="h-48 bg-[#1a6ac3] flex items-center justify-center">
+                        <i class="fas fa-toolbox text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Survival Kits</h3>
+                        <p class="text-gray-600 mb-4">Access our survival kits designed to help you make the most of your conference experience, including networking tips, presentation guidelines, and local area information.</p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://drive.google.com/file/d/1YourAttendeeKitFileID/view?usp=sharing" target="_blank" class="bg-[#1a6ac3] hover:bg-[#213874] text-white px-4 py-2 rounded-full font-medium text-sm transition inline-block">Attendee Kit</a>
+                            <a href="https://drive.google.com/file/d/1YourSpeakerKitFileID/view?usp=sharing" target="_blank" class="bg-[#1a6ac3] hover:bg-[#213874] text-white px-4 py-2 rounded-full font-medium text-sm transition inline-block">Speaker Kit</a>
+                            <a href="https://drive.google.com/file/d/1YourVisitorKitFileID/view?usp=sharing" target="_blank" class="bg-[#1a6ac3] hover:bg-[#213874] text-white px-4 py-2 rounded-full font-medium text-sm transition inline-block">Visitor Kit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Page-specific scripts for about.html
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        const mobileMenu = document.getElementById('mobile-menu');
+                        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+
+            // Organizing Committee Carousel Functionality
+            const teamMembers = [
+                { 
+                    name: "Charles Nkuba", 
+                    role: "Assistant Chairperson",
+                    college: "Muhimbili University",
+                    bio: "A dedicated medical student with passion for leadership and community service."
+                },
+                { 
+                    name: "Innocent Sambua", 
+                    role: "Secretary General",
+                    college: "University of Dodoma",
+                    bio: "Experienced in organizational management and student affairs coordination."
+                },
+                { 
+                    name: "Dina Ngiga", 
+                    role: "Treasurer",
+                    college: "Kilimanjaro Christian Medical University",
+                    bio: "Financial expert with strong analytical skills and attention to detail."
+                },
+                { 
+                    name: "Justice Mwangi", 
+                    role: "Academic Director",
+                    college: "St. Francis University College",
+                    bio: "Academic excellence advocate promoting research and scientific development."
+                },
+                { 
+                    name: "Mohamed Faisal", 
+                    role: "Events Coordinator",
+                    college: "Muhimbili University",
+                    bio: "Creative event planner with expertise in large-scale conference management."
+                },
+                { 
+                    name: "Angel Kimario", 
+                    role: "Public Relations Officer",
+                    college: "Hubert Kairuki Memorial University",
+                    bio: "Communication specialist fostering partnerships and community engagement."
+                }
+            ];
+
+            const cards = document.querySelectorAll(".card");
+            const dots = document.querySelectorAll(".dot");
+            const memberName = document.querySelector(".member-name");
+            const memberRole = document.querySelector(".member-role");
+            const leftArrow = document.querySelector(".nav-arrow.left");
+            const rightArrow = document.querySelector(".nav-arrow.right");
+
+            let currentIndex = 0;
+            let isAnimating = false;
+
+            function updateCarousel(newIndex) {
+                if (isAnimating) return;
+                isAnimating = true;
+                
+                currentIndex = (newIndex + cards.length) % cards.length;
+                
+                cards.forEach((card, i) => {
+                    const offset = (i - currentIndex + cards.length) % cards.length;
+                    
+                    card.classList.remove(
+                        "center",
+                        "left-1",
+                        "left-2",
+                        "right-1",
+                        "right-2",
+                        "hidden"
+                    );
+                    
+                    if (offset === 0) {
+                        card.classList.add("center");
+                    } else if (offset === 1) {
+                        card.classList.add("right-1");
+                    } else if (offset === 2) {
+                        card.classList.add("right-2");
+                    } else if (offset === cards.length - 1) {
+                        card.classList.add("left-1");
+                    } else if (offset === cards.length - 2) {
+                        card.classList.add("left-2");
+                    } else {
+                        card.classList.add("hidden");
+                    }
+                });
+                
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle("active", i === currentIndex);
+                });
+                
+                // Update member information with fade effect
+                memberName.style.opacity = "0";
+                memberRole.style.opacity = "0";
+                
+                setTimeout(() => {
+                    memberName.textContent = teamMembers[currentIndex].name;
+                    memberRole.textContent = teamMembers[currentIndex].role;
+                    
+                    memberName.style.opacity = "1";
+                    memberRole.style.opacity = "1";
+                }, 300);
+                
+                setTimeout(() => {
+                    isAnimating = false;
+                }, 800);
+            }
+
+            // Event listeners
+            if (leftArrow) {
+                leftArrow.addEventListener("click", () => {
+                    updateCarousel(currentIndex - 1);
+                });
+            }
+
+            if (rightArrow) {
+                rightArrow.addEventListener("click", () => {
+                    updateCarousel(currentIndex + 1);
+                });
+            }
+
+            dots.forEach((dot, i) => {
+                dot.addEventListener("click", () => {
+                    updateCarousel(i);
+                });
+            });
+
+            cards.forEach((card, i) => {
+                card.addEventListener("click", () => {
+                    updateCarousel(i);
+                });
+            });
+
+            // Keyboard navigation
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "ArrowLeft") {
+                    updateCarousel(currentIndex - 1);
+                } else if (e.key === "ArrowRight") {
+                    updateCarousel(currentIndex + 1);
+                }
+            });
+
+            // Touch/swipe support
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            document.addEventListener("touchstart", (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+
+            document.addEventListener("touchend", (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                const diff = touchStartX - touchEndX;
+                
+                if (Math.abs(diff) > swipeThreshold) {
+                    if (diff > 0) {
+                        updateCarousel(currentIndex + 1);
+                    } else {
+                        updateCarousel(currentIndex - 1);
+                    }
+                }
+            }
+
+            // Initialize carousel
+            updateCarousel(0);
+        });
+    </script>
+</body>
+</html>
