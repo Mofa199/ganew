@@ -110,45 +110,36 @@ class PageManager {
     }
 
     // Setup mobile menu functionality
-    setupMobileMenu() {
-        // Use a longer timeout to ensure header is fully loaded
-        setTimeout(() => {
-            const toggle = document.getElementById('menu-toggle');
-            const menu = document.getElementById('mobile-menu');
-            const overlay = document.getElementById('mobile-overlay');
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("mobile-menu");
+  const overlay = document.getElementById("mobile-overlay");
 
-            // Check if we have all required elements for the standard mobile menu
-            if (toggle && menu && overlay) {
-                // Add click event to toggle mobile menu
-                toggle.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    // Toggle menu visibility
-                    menu.classList.toggle('hidden');
-                    menu.classList.toggle('translate-x-full');
-                    overlay.classList.toggle('opacity-0');
-                    overlay.classList.toggle('pointer-events-none');
-                });
+  if (toggle && menu && overlay) {
+    // Toggle open
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+      overlay.classList.toggle("hidden");
+    });
 
-                // Close menu when clicking overlay
-                overlay.addEventListener('click', () => {
-                    menu.classList.add('hidden');
-                    menu.classList.add('translate-x-full');
-                    overlay.classList.add('opacity-0');
-                    overlay.classList.add('pointer-events-none');
-                });
+    // Close when clicking overlay
+    overlay.addEventListener("click", () => {
+      menu.classList.add("hidden");
+      overlay.classList.add("hidden");
+    });
 
-                // Close menu when clicking menu links
-                const menuLinks = menu.querySelectorAll('a');
-                menuLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        menu.classList.add('hidden');
-                        menu.classList.add('translate-x-full');
-                        overlay.classList.add('opacity-0');
-                        overlay.classList.add('pointer-events-none');
-                    });
-                });
+    // Close when clicking links
+    menu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.add("hidden");
+        overlay.classList.add("hidden");
+      });
+    });
+  }
+});
+</script>
+
             } else {
                 // Fallback for pages with inline mobile menu (like schedule.html)
                 // Also handle cases where the mobile menu might be loaded dynamically
@@ -203,4 +194,5 @@ function hideLoader() {
             loader.style.display = 'none';
         }, 800);
     }
+
 }
